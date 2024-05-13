@@ -36,23 +36,49 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.header__left {
+  width: 166px;
+}
 .header__center-img {
   width: 520px;
   height: 220px;
 }
+.header__right {
+  width: 166px;
+}
+.header .music {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header .music__text {
+  color: #FDF1D5;
+  font-size: 20px;
+  line-height: 30px;
+}
+.header .music__img {
+  color: #FDF1D5;
+  width: 40px;
+  height: 40px;
+  filter: invert(87%) sepia(4%) saturate(1989%) hue-rotate(334deg) brightness(113%) contrast(98%);
+  cursor: pointer;
+}
 
 .top {
-  height: 500px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: start;
-  padding-top: 100px;
+  padding: 100px 0;
+  background-color: #FDF1D5;
 }
 .top__box {
   display: flex;
   width: 300px;
   height: 300px;
   padding: 30px;
+  cursor: pointer;
 }
 .top__round {
   box-sizing: border-box;

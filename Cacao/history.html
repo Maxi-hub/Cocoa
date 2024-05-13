@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>History</title>
 </head>
+
 <body>
     <div class="wrapper">
         <header class="header center">
             <div class="header__left"></div>
-            <a class="header__center" href="index.html" >
+            <a class="header__center" href="index.html">
                 <img class="header__center-img" src="img/cocoa_1.2.png" alt="Логотип какао">
             </a>
             <div class="header__right">
-                <div class="header__right-menu"></div>
+                <div class="header__right-menu">
+                    <figure class="music">
+                        <figcaption class="music__text">Listen wild jungles</figcaption>
+                        <img class="music__img" src="img/volume-high-solid.svg"
+                            onMouseOver="document.getElementById('audio').play()"
+                            onclick="document.getElementById('audio').pause()">
+                        <audio id="audio" loop src="audio/wild.ogg">
+                    </figure>
+                </div>
             </div>
         </header>
         <div class="about">
-    
+
         </div>
     </div>
 
 </body>
+
 </html>
