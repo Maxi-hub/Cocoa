@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chocalate (socolata)</title>
+</head>
+
+<body>
+    <header class="header center">
+        <div class="header__left"></div>
+        <a class="header__center" href="#" >
+            <img class="header__center-img" src="img/cocoa_1.2.png" alt="Логотип какао">
+        </a>
+        <div class="header__right">
+            <div class="header__right-menu"></div>
+        </div>
+    </header>
+    <div class="top center">
+        <div class="top__box" onmouseover='delayedFun(event)'>
+            <div class="top__round">
+                <div class="top__round-small"><a class="top__link" target="_self" href="history.html"></a></div>
+            </div>
+            <img class="top__img" src="img/calendar3.png" alt="Календарь майя">
+        </div>
+    </div>
+    <div class="content center">
+
+    </div>
+    <script type="text/javascript">
+        function fun() {
+            window.location.href = "history.html"; 
+        }
+
+        function delayedFun(event) {
+            setTimeout(fun, 7000); 
+        }
+    </script>
+</body>
+
+</html>
