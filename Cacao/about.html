@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Chocalate (socolata)</title>
+    <title>Что есть какао</title>
 </head>
 
 <body>
     <header class="header center">
         <div class="header__left"></div>
-        <a class="header__center" href="#">
+        <a class="header__center" href="index.html">
             <img class="header__center-img" src="img/cocoa_1.2.png" alt="Логотип какао">
         </a>
         <div class="header__right">
@@ -22,26 +22,19 @@
                         onclick="document.querySelector('audio').play()"
                         ondblclick="document.querySelector('audio').pause()">
                     <span class="music__img-text">click once to play and twice to stop</span>
-                    <audio id="audio" src="audio/wildjunglewithhighttree.mp3" loop></audio>
+                    <audio id="audio" loop src="audio/wildjunglewithhighttree.mp3"></audio>
                 </figure>
             </div>
         </div>
     </header>
-    <div class="top center">
-        <div class="top__box" onmouseover='delayedFun(event)'>
-            <audio id="door" src="audio/door.mp3"></audio>
-            <div class="top__round">
-                <div class="top__round-small"><a class="top__link" target="_self" href="history.html"></a></div>
-            </div>
-            <img class="top__img" src="img/calendar.png" alt="Календарь майя">
+    <div class="info">
+        <div class="effect">
+            <img class="scroll" src="img/scroll_closed2.png" alt="свернутый свиток">
+            <img class="scroll open" src="img/scroll2.png" alt="открытый свиток">
         </div>
-    </div>
-    <!-- <div class="content center">
 
-    </div> -->
-    <!-- <div class="navigation center"> -->
-    <!-- <img src="img/jungle.png" alt=""> -->
-    <!-- </div> -->
+
+    </div>
     <footer class="footer center">
         <div class="copyright">&copy; Emma Lebedeva & VP, 2024</div>
         <img class="footer__img" src="img/footercenter.png" alt="">
@@ -56,22 +49,7 @@
             </a>
         </div>
     </footer>
-    <script type="text/javascript">
-        function fun() {
-            window.location.href = "history.html";
-        }
 
-        function delayedFun(event) {
-            setTimeout(fun, 7000);
-        }
-
-        // function playAudio() {
-        //     var audio = document.getElementById('door');
-        //     audio.play();
-        // }
-
-        // document.querySelector('.top__box').addEventListener('mouseover', playAudio);
-    </script>
 </body>
 
 </html>
