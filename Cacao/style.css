@@ -30,9 +30,25 @@
     transform: scale(1.5);
   }
 }
+@keyframes changeCursorColor {
+  0% {
+    background-color: green;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    background-color: red;
+  }
+}
 * {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
 }
 
 body {
@@ -66,8 +82,8 @@ body {
 
 .wrapper {
   display: none;
-  animation-delay: 12s;
-  animation: show 7s;
+  animation-delay: 10s;
+  animation: show 1.5s;
   background: url(img/body_history1.png);
   background-size: cover;
   background-attachment: fixed;
@@ -82,6 +98,9 @@ body {
 }
 .header__left {
   width: 166px;
+}
+.header__img-menu:hover {
+  cursor: pointer;
 }
 .header__center-img {
   width: 520px;
@@ -133,62 +152,42 @@ body {
 }
 
 .top {
-  height: 100vh;
+  height: 70vh;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
-  padding: 100px 0;
-  background: url(img/body.png) no-repeat;
-  background-size: cover;
+  padding: 70px 0;
+  background-color: #FDF1D5;
 }
 .top__box {
   display: flex;
-  width: 200px;
-  height: 200px;
-  padding: 30px;
+  width: 499px;
+  height: 498px;
+  margin-left: 200px;
   cursor: pointer;
 }
 .top__round {
-  box-sizing: border-box;
-  width: 200px;
-  height: 200px;
   border-radius: 50%;
   background: #000;
-  position: relative;
-  transition: transform 5s;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.top__img {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  transition: margin 3s;
+  width: 460px;
+  height: 460px;
+  margin-left: 345px;
+  margin-top: 25px;
+  opacity: 0;
+  transition: transform 5s, opacity 0.3s;
 }
 .top__round-small {
   position: absolute;
   width: 5px;
   height: 5px;
   background: #fff;
+  box-shadow: 0px 0px 5px 5px #fefefe;
   border-radius: 50%;
   transition: transform 7s;
-}
-
-.top__box:hover .top__img {
-  animation: rotate-90-cw 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards, disappear 2s forwards;
-  animation-delay: 0s, 3s;
-  margin-left: 320px;
-}
-
-.top__box:hover .top__round {
-  transition-delay: 4s;
-  transform: scale(8);
-}
-
-.top__box:hover .top__round > .top__round-small {
-  transition-delay: 5s;
-  transform: scale(100);
 }
 
 .content {
@@ -210,27 +209,26 @@ body {
 
 .about {
   min-height: 250vh;
-  cursor: pointer;
   transition: opacity 0.7s;
 }
 .about__title {
   color: #2c5536;
   font-size: 30px;
-  margin-top: 25px;
+  padding-top: 25px;
 }
 .about__box {
   margin-top: 25px;
   margin-bottom: 50px;
   padding-top: 25px;
   padding-bottom: 30px;
-  opacity: 0.2;
+  opacity: 0.1;
 }
 .about__box-title {
   padding-bottom: 10px;
 }
 
-.transparent {
-  opacity: 0.5;
+.cursor {
+  cursor: default;
 }
 
 .visible {
@@ -238,27 +236,37 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.info {
-  height: 250vh;
-  padding: 0 20px;
+.block-button {
   display: flex;
-  justify-content: center;
-  background: white;
+  justify-content: flex-end;
 }
-.info .scroll {
-  width: 1024px;
-  height: 216px;
+
+.button-skip {
+  border-radius: 20px;
+  background-color: rgba(254, 166, 3, 0.953);
+  border-color: rgba(254, 166, 3, 0.953);
+  position: fixed;
+  margin-top: 20px;
+  margin-right: 30px;
+  padding: 5px;
+  width: 155px;
+  height: 30px;
 }
-.info .effect:hover img.scroll {
-  display: none;
+
+.info {
+  min-height: 100vh;
+  padding-top: 30px;
+  background: #F7E7DB;
+  box-sizing: border-box;
 }
-.info .effect img.open {
-  display: none;
+.info__title {
+  font-size: 18px;
+  padding-bottom: 10px;
+  list-style: url(img/bob.png);
 }
-.info .effect:hover img.open {
-  display: block;
-  height: 200vh;
-  width: 1024px;
+.info__box {
+  padding-bottom: 50px;
+  align-items: center;
 }
 
 .link-box {
@@ -363,11 +371,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+.footer .email:hover {
+  color: gold;
+}
 .footer .social {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   text-decoration: none;
   color: #FDF1D5;
   margin-left: 5px;
@@ -376,5 +386,31 @@ body {
   margin-left: 5px;
 }
 .footer .social:hover {
+  cursor: pointer;
   color: gold;
+}
+
+.calendar-box {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#image {
+  display: block;
+  height: auto;
+  position: relative;
+  transition: margin 3s;
+}
+
+#canvas {
+  position: absolute;
+  top: -26px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#canvas.active {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
