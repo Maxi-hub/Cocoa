@@ -36,9 +36,9 @@
             <div class="calendar-box">
                 <img id="image" src="img/calendar-stone2.3.png" alt="Каменный календарь майя">
                 <canvas id="canvas"></canvas>
-                <div class="top__round">
+                <!-- <div class="top__round"> -->
                     <div class="top__round-small"><a class="top__link" target="_self" href="history.html"></a></div>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>
@@ -77,13 +77,14 @@
         const canvas = document.getElementById('canvas');
         topBox.addEventListener('click', () => {
             // const boxImg = document.querySelector('.top__img');
-            image.setAttribute('style', 'animation: rotate-90-cw 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards, disappear 2s forwards; animation-delay: 0s, 3s; margin-left: 320px');
+            // image.setAttribute('style', 'animation: rotate-90-cw 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards, disappear 2s forwards; animation-delay: 0s, 3s; margin-left: 320px');
+            image.setAttribute('style', 'animation: rotate-90-cw 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards, disappear 2s forwards; animation-delay: 0s, 3s;');
     
-            const round = document.querySelector('.top__round');
-            round.setAttribute('style', 'opacity: 1; transition-delay: 4s; transform: scale(8)');
+            // const round = document.querySelector('.top__round');
+            // round.setAttribute('style', 'opacity: 1; transition-delay: 4s; transform: scale(8)');
 
             const roundSmall = document.querySelector('.top__round-small');
-            roundSmall.setAttribute('style', 'transition-delay: 5s; transform: scale(100)');
+            roundSmall.setAttribute('style', 'opacity: 1; transition-delay: 5s; transform: scale(100)');
         });
 
 
