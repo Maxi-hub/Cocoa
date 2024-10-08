@@ -157,26 +157,24 @@ body {
   justify-content: center;
   align-items: center;
   padding: 70px 0;
-  background: url(img/i.webp) no-repeat;
+  background-color: white;
   background-size: cover;
 }
 .top__box {
   display: flex;
   width: 499px;
   height: 498px;
-  cursor: pointer;
 }
 .top__round {
   border-radius: 50%;
-  background: #000;
+  background-image: url(img/light2.png);
+  background-size: cover;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 460px;
   height: 460px;
-  margin-left: 345px;
-  margin-top: 25px;
   opacity: 0;
   transition: transform 5s, opacity 0.3s;
 }
@@ -399,10 +397,18 @@ body {
 }
 
 #image {
-  display: block;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   transition: margin 3s;
+  max-width: 499px;
+  max-height: 498px;
+}
+
+#calendarInnerRing {
+  position: absolute;
+  cursor: pointer;
 }
 
 #canvas {
