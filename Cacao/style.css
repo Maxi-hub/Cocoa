@@ -97,12 +97,53 @@ body {
   align-items: center;
 }
 .header__left {
-  width: 166px;
+  width: 200px;
+  position: relative;
 }
-.header__img-menu:hover {
+.header__left:hover .header__menu {
+  display: flex;
+}
+.header__imgMenu {
+  margin-left: 25px;
   cursor: pointer;
 }
-.header__center-img {
+.header__menu {
+  position: absolute;
+  box-sizing: border-box;
+  width: 250px;
+  height: 300px;
+  background-image: url(img/pngwing2.png);
+  background-size: contain;
+  z-index: 1;
+  display: none;
+  padding: 20px 5px 20px 20px;
+  border-radius: 20px;
+  gap: 10px;
+  flex-direction: column;
+  overflow: auto;
+}
+.header__menu-title {
+  text-align: center;
+  margin-bottom: 25px;
+  margin-right: 20px;
+}
+.header__menu-link {
+  width: 200px;
+  margin-right: 5px;
+  padding: 5px;
+}
+.header__menu-link:hover {
+  opacity: 1;
+  background-color: rgba(132, 41, 0, 0.5490196078);
+  border-radius: 10px;
+}
+.header__menu-linkhead {
+  margin-left: 60px;
+}
+.header__menu-linkhead:hover {
+  font-weight: bold;
+}
+.header__center-logo {
   width: 520px;
   height: 220px;
 }
@@ -158,35 +199,59 @@ body {
   align-items: center;
   padding: 70px 0;
   background-color: white;
-  background-size: cover;
 }
 .top__box {
   display: flex;
   width: 499px;
   height: 498px;
 }
-.top__round {
+
+.calendar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar__boxImages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: margin 3s;
+  width: 499px;
+  height: 498px;
+  z-index: 1;
+}
+.calendar__background {
   border-radius: 50%;
-  background-image: url(img/light2.png);
+  background-image: url(img/light2.1.png);
   background-size: cover;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 460px;
-  height: 460px;
-  opacity: 0;
-  transition: transform 5s, opacity 0.3s;
+  width: 360px;
+  height: 360px;
+  transition: transform 5s ease-in;
 }
-.top__round-small {
+
+#calendarInnerRing {
   position: absolute;
-  width: 5px;
-  height: 5px;
-  background: #fff;
-  box-shadow: 0px 0px 5px 5px #fefefe;
-  border-radius: 50%;
-  transition: transform 5s, opacity 0.3s;
+  cursor: pointer;
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+#canvas {
+  position: absolute;
+  top: -26px;
+  pointer-events: none;
   opacity: 0;
+  transition: 1s;
+  z-index: 1;
+}
+
+#canvas.active {
+  opacity: 1;
 }
 
 .content {
@@ -387,38 +452,4 @@ body {
 .footer .social:hover {
   cursor: pointer;
   color: gold;
-}
-
-.calendar-box {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  transition: margin 3s;
-  max-width: 499px;
-  max-height: 498px;
-}
-
-#calendarInnerRing {
-  position: absolute;
-  cursor: pointer;
-}
-
-#canvas {
-  position: absolute;
-  top: -26px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-#canvas.active {
-  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

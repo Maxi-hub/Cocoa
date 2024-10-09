@@ -119,14 +119,62 @@ body {
     @include flex(flex, space-between, center);
 
     &__left {
-        width: 166px;
+        width: 200px;
+        position: relative;
+
+        &:hover .header__menu {
+            display: flex; 
+        }
     }
 
-    &__img-menu:hover {
+    &__imgMenu {
+        margin-left: 25px;
         cursor: pointer;
     }
 
-    &__center-img {
+    &__menu {
+        position: absolute;
+        box-sizing: border-box;
+        width: 250px;
+        height: 300px;
+        background-image: url(img/pngwing2.png);
+        background-size: contain;
+        z-index: 1;
+        display: none;
+        padding: 20px 5px 20px 20px;
+        border-radius: 20px;
+        gap: 10px;
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    &__menu-title {
+        text-align: center;
+        margin-bottom: 25px;
+        margin-right: 20px;
+    }
+
+    &__menu-link {
+        width: 200px;
+        margin-right: 5px;
+        padding: 5px;
+    }
+
+    &__menu-link:hover {
+        opacity: 1;
+        background-color: #8429008c;
+        border-radius: 10px;
+    }
+
+    &__menu-linkhead {
+        margin-left: 60px;
+    }
+
+    &__menu-linkhead:hover {
+        font-weight: bold;
+    }
+
+    &__center-logo {
         width: 520px;
         height: 220px;
     }
@@ -179,48 +227,72 @@ body {
         visibility: visible;
         opacity: 1;
     }
+    
 }
 
 .top {
     height: 70vh;
-    // @include flex(flex, start, start);
     @include flex(flex, center, center);
     padding: 70px 0;
     background-color: white;
-    // background: url(img/i.webp) no-repeat;
-    background-size: cover;
 
     &__box {
         display: flex;
         width: 499px;
         height: 498px;
-        // margin-left: 200px;
+    }
+}
+
+
+.calendar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__boxImages {
+        @include flex(flex, center, center);
+        position: relative;
+        transition: margin 3s;
+        width: 499px;
+        height: 498px;
+        z-index: 1;
     }
 
-    &__round {
+    &__background {
         border-radius: 50%;
-        background-image: url(img/light2.png);
+        background-image: url(img/light2.1.png);
         background-size: cover;
         position: absolute;
-        @include flex(flex, center, center);
-        width: 460px;
-        height: 460px;
-        // margin-left: 345px;
-        // margin-top: 25px;
-        opacity: 0;
-        transition: transform 5s, opacity 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 360px;
+        height: 360px;
+        transition: transform 5s ease-in;
+        // box-shadow: 0px 0px 22px 40px #422201;
     }
+}
 
-    &__round-small {
-        position: absolute;
-        width: 5px;
-        height: 5px;
-        background: #fff;
-        box-shadow: 0px 0px 5px 5px #fefefe;
-        border-radius: 50%;
-        transition: transform 5s, opacity 0.3s;
-        opacity: 0;
-    }
+
+
+#calendarInnerRing {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 2s ease, opacity 2s ease;
+}
+
+#canvas {
+    position: absolute;
+    top: -26px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 1s;
+    z-index: 1;
+}
+
+#canvas.active {
+    opacity: 1;
 }
 
 .content {
@@ -428,7 +500,6 @@ body {
             width: 55px;
             height: 55px;
             filter: brightness(200%);
-
         }
 
         .mail {
@@ -463,37 +534,4 @@ body {
         cursor: pointer;
         color: gold;
     }
-}
-
-.calendar-box {
-    position: relative; 
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-}
-
-#image {
-    @include flex(flex, center, center);
-    position: relative;
-    transition: margin 3s;
-    max-width: 499px;
-    max-height: 498px;
-    // z-index: 1;
-}
-
-#calendarInnerRing {
-    position: absolute; 
-    cursor: pointer;
-}
-
-#canvas {
-    position: absolute; 
-    top: -26px;
-    pointer-events: none; 
-    opacity: 0; 
-    transition: opacity 0.3s; 
-}
-
-#canvas.active {
-    opacity: 1;
 }

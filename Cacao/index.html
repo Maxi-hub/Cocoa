@@ -11,16 +11,24 @@
 <body>
     <header class="header center">
         <div class="header__left">
-            <img class="header__img-menu" src="img/menu3.png" alt="меню">
+            <img class="header__imgMenu" src="img/burgermenu.png" alt="меню">
+            <div class="header__menu">
+                <h3 class="header__menu-title">Мир какао</h3>
+                <a href="about.html" class="header__menu-link">Какао и Шоколад: путь к Здоровью и Удовольствию</a>
+                <a href="history.html" class="header__menu-link">История какао</a>
+                <a href="news.html" class="header__menu-link">Новости какао</a>
+                <a href="recipes.html" class="header__menu-link">Рецепты с какао и шоколадом</a>
+                <a href="index.html" class="header__menu-linkhead">На главную</a>
+            </div>
         </div>
         <a class="header__center" href="#">
-            <img class="header__center-img" src="img/cocoa_1.2.png" alt="Логотип какао">
+            <img class="header__center-logo" src="img/logo.png" alt="Логотип какао">
         </a>
         <div class="header__right">
             <div class="header__right-menu">
                 <figure class="music">
                     <figcaption class="music__text">Listen wild jungles</figcaption>
-                    <img class="music__img" src="img/sound2.2.png" alt="Знак динамика"
+                    <img class="music__img" src="img/sound.png" alt="Знак динамика"
                         onclick="document.querySelector('audio').play()"
                         ondblclick="document.querySelector('audio').pause()">
                     <span class="music__img-text">click once to play and twice to stop</span>
@@ -31,18 +39,14 @@
     </header>
     <div class="top center">
         <div class="top__box">
-            <audio id="door" src="audio/door.mp3"></audio>
-
-            <div class="calendar-box">
-                <div id="image">
-                    <img id="calendarOuterRing" src="img/Calendar-round.png" alt="Каменный календарь майя (ободок)">
-                    <img id="calendarInnerRing" src="img/small-round2.png"
+            <div class="calendar">
+                <div class="calendar__boxImages">
+                    <img id="calendarOuterRing" src="img/calendarOuterRing.png" alt="Каменный календарь майя (ободок)">
+                    <img id="calendarInnerRing" src="img/calendarInnerRing.png"
                         alt="Каменный календарь майя (внутрення часть)">
                 </div>
                 <canvas id="canvas"></canvas>
-                <div class="top__round">
-                <div class="top__round-small"><a class="top__link" target="_self" href="history.html"></a></div>
-                </div>
+                <div class="calendar__background"></div>
             </div>
         </div>
     </div>
@@ -70,40 +74,40 @@
         }
 
         function delayedFunction(event) {
-            setTimeout(changePage, 7000);
+            setTimeout(changePage, 6000);
         }
 
-        const image = document.getElementById('image');
+        const calendarBoxImages = document.querySelector('.calendar__boxImages');
         const calendarOuterRing = document.querySelector('#calendarOuterRing');
         const calendarInnerRing = document.querySelector('#calendarInnerRing');
         const topBox = document.querySelector('.top__box');
-        const calendarBox = document.querySelector('.calendar-box');
+        const calendarBackground = document.querySelector('.calendar__background');
         const canvas = document.getElementById('canvas');
 
-        topBox.onclick = function () { delayedFunction(event); };
+        // topBox.onclick = function () { };
 
-        topBox.addEventListener('click', () => {
-            // const boxImg = document.querySelector('.top__img');
-            // image.setAttribute('style', 'animation: rotate-90-cw 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) forwards, disappear 2s forwards; animation-delay: 0s, 3s; margin-left: 320px');
-            calendarInnerRing.setAttribute('style', 'opacity: 1; transition-delay: 4s; transform: scale(0.5)');
+        calendarInnerRing.addEventListener('click', () => {
+            delayedFunction(event);
+            calendarInnerRing.style.transform = 'scale(0.5)';
 
-            // const round = document.querySelector('.top__round');
-            // round.setAttribute('style', 'opacity: 1; transition-delay: 4s; transform: scale(8)');
+            setTimeout(() => {
+                calendarInnerRing.style.opacity = '0';
+            }, 1500);
 
-            const roundSmall = document.querySelector('.top__round-small');
-            roundSmall.setAttribute('style', 'opacity: 1; transition-delay: 5s; transform: scale(100)');
+            setTimeout(() => {
+                calendarBackground.style.transform = 'scale(50)';
+                calendarBackground.style.zIndex = '2';
+            }, 3500);
         });
 
-
         const gl = canvas.getContext('webgl');
-        // const image = document.getElementById('image');
 
         // Устанавливаем размеры канваса равными размерам изображения
         canvas.width = '510'; // image.width;
         canvas.height = '545'; // image.height;
 
         // Убедитесь, что канвас имеет те же размеры, что и изображение
-        calendarBox.onload = () => {
+        calendarBoxImages.onload = () => {
             canvas.width = '510'; // image.width;
             canvas.height = '545'; // image.height;
         };
@@ -235,29 +239,20 @@
         }
 
         calendarOuterRing.addEventListener('mouseenter', () => {
-            console.log('mouseenter');
             canvas.classList.add('active');
             draw();
         });
 
         calendarInnerRing.addEventListener('mouseenter', () => {
-            console.log('mouseenter');
             canvas.classList.add('active');
             draw();
         });
 
         calendarOuterRing.addEventListener('mouseout', () => {
-            console.log('mouseout');
-            canvas.classList.remove('active');
-        });
-
-        calendarInnerRing.addEventListener('mouseout', () => {
-            console.log('mouseout');
             canvas.classList.remove('active');
         });
 
         calendarInnerRing.addEventListener('click', () => {
-            console.log('mouse click');
             canvas.classList.remove('active');
         });
 
