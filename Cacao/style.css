@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes rotate-90-cw {
   0% {
     transform: rotate(0);
@@ -39,6 +40,14 @@
   }
   100% {
     background-color: red;
+  }
+}
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 rgb(172, 145, 198);
+  }
+  100% {
+    box-shadow: 0 0 20px 0px rgb(172, 145, 198);
   }
 }
 * {
@@ -116,9 +125,9 @@ body {
   background-size: contain;
   z-index: 1;
   display: none;
-  padding: 20px 5px 20px 20px;
+  padding: 20px 10px 20px 20px;
   border-radius: 20px;
-  gap: 10px;
+  gap: 5px;
   flex-direction: column;
   overflow: auto;
 }
@@ -128,7 +137,6 @@ body {
   margin-right: 20px;
 }
 .header__menu-link {
-  width: 200px;
   margin-right: 5px;
   padding: 5px;
 }
@@ -137,10 +145,10 @@ body {
   background-color: rgba(132, 41, 0, 0.5490196078);
   border-radius: 10px;
 }
-.header__menu-linkhead {
+.header .last {
   margin-left: 60px;
 }
-.header__menu-linkhead:hover {
+.header .last:hover {
   font-weight: bold;
 }
 .header__center-logo {
@@ -193,17 +201,35 @@ body {
 }
 
 .top {
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 70px 0;
-  background-color: white;
+  background-image: url(img/jungle.png);
+  background-size: cover;
 }
-.top__box {
+.controller {
   display: flex;
-  width: 499px;
-  height: 498px;
+}
+.controller__img:hover {
+  transition: transform 0.5s;
+}
+.controller__img:hover {
+  transform: scale(1.1);
+}
+
+.controller-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 15px 15px 15px 0;
+  gap: 15px;
+}
+
+.controller-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 15px 0 15px 15px;
+  gap: 15px;
 }
 
 .calendar {
@@ -320,27 +346,64 @@ body {
 .info {
   min-height: 100vh;
   padding-top: 30px;
+  padding-bottom: 30px;
   background: #F7E7DB;
   box-sizing: border-box;
 }
+.info__item {
+  position: relative;
+}
+.info__mainTitle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.info__mainSubtitle {
+  margin-bottom: 75px;
+  display: flex;
+  justify-content: center;
+}
 .info__title {
-  font-size: 18px;
+  font-size: 30px;
   padding-bottom: 10px;
+  padding-left: 10px;
   list-style: url(img/bob.png);
+  cursor: pointer;
+}
+.info__title-inner {
+  display: inline-block;
+  /* Позволяет использовать margin */
+  margin-top: -5px;
 }
 .info__box {
   padding-bottom: 50px;
   align-items: center;
 }
+.info__item-img {
+  float: left;
+  margin-right: 17px;
+  margin-top: -7px;
+}
+.info__text {
+  margin-top: 7px;
+}
 
-.link-box {
+.linkBox {
   background-color: #F7E7DB;
   display: inline-block;
 }
-.link-box__img {
+.linkBox__title {
+  text-align: center;
+  margin: 42px auto;
+}
+.linkBox__img {
   width: 500px;
   margin-left: 70px;
   margin-top: 20px;
+}
+
+.subtitle {
+  margin-bottom: 20px;
 }
 
 .menu {
@@ -366,7 +429,7 @@ body {
   font-weight: 700;
 }
 .menu .link:hover {
-  color: rgb(92, 50, 17);
+  color: rgb(71, 34, 4);
 }
 
 .main {
@@ -383,10 +446,11 @@ body {
 .main__title {
   margin-left: 5%;
   margin-bottom: 10px;
-  color: rgb(92, 50, 17);
+  font-size: 34px;
 }
 .main__title_news {
   font-weight: bold;
+  color: rgb(92, 50, 17);
 }
 .main .sourse {
   color: #969595;
@@ -396,6 +460,130 @@ body {
 
 .navigation {
   height: 80vh;
+}
+
+.cultureNews {
+  margin: 50px 0;
+}
+
+.extraction {
+  margin-bottom: 100px;
+}
+.extraction__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.extraction__list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.extraction__list-item {
+  width: 330px;
+  height: 120px;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.extraction__list-item:hover {
+  animation: shadow-drop-center 0.4s linear both;
+}
+.extraction__list-text {
+  display: none;
+}
+
+.article-full {
+  position: fixed;
+  top: 100px;
+  left: auto;
+  width: 90%;
+  height: 80%;
+  /* height: auto; */
+  background-color: #f7e7db;
+  padding: 20px;
+  border: px solid black;
+  border-radius: 20px;
+  z-index: 1;
+  display: none;
+}
+
+.article-full h2 {
+  margin-top: 0;
+}
+
+.article-button {
+  position: absolute;
+  font-size: 15px;
+  background-color: rgba(254, 166, 3, 0.953);
+  border-radius: 55%;
+  border-color: rgba(254, 166, 3, 0.953);
+  box-shadow: azure;
+  padding: 15px;
+  margin: 30px;
+  bottom: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.cocoaTypes {
+  margin-bottom: 100px;
+}
+.cocoaTypes__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.cocoaTypes__list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.cocoaTypes__list-item {
+  width: 330px;
+  height: 120px;
+  text-align: center;
+  padding: 15px;
+  font-size: 20px;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.cocoaTypes__list-item:hover {
+  animation: shadow-drop-center 0.4s linear both;
+}
+
+.recipesBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-image: url(img/choco3.png);
+  background-size: cover;
+}
+.recipesBox__title {
+  margin-bottom: 20px;
+}
+
+.topic {
+  min-height: 180px;
+  width: 1000px;
+  padding: 10px;
+  background: #FFF;
+  box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+  margin: 20px;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20px;
 }
 
 .footer {

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Какао культура сегодня</title>
+</head>
+
+<body>
+    <header class="header center">
+        <div class="header__left">
+            <img class="header__imgMenu" src="img/burgermenu.png" alt="меню">
+            <div class="header__menu">
+                <h3 class="header__menu-title">Мир какао</h3>
+                <!-- (о какао и шоколаде): польза, состав и эффекты -->
+                <a href="about.html" class="header__menu-link">Шоколадные секреты</a>
+                <a href="history.html" class="header__menu-link">История какао</a>
+                <a href="news.html" class="header__menu-link">Какао новости</a>
+                <!-- рецепты: -->
+                <a href="recipes.html" class="header__menu-link">Какао и Шоколад: путь к Здоровью и Удовольствию</a>
+                <a href="culture.html" class="header__menu-link">Культура какао сегодня</a>
+            </div>
+        </div>
+        <a class="header__center" href="index.html">
+            <img class="header__center-logo" src="img/logo.png" alt="Логотип какао">
+        </a>
+        <div class="header__right">
+            <div class="header__right-menu">
+                <figure class="music">
+                    <figcaption class="music__text">Listen wild jungles</figcaption>
+                    <img class="music__img" src="img/sound.png" alt="Знак динамика"
+                        onclick="document.querySelector('audio').play()"
+                        ondblclick="document.querySelector('audio').pause()">
+                    <span class="music__img-text">click once to play and twice to stop</span>
+                    <audio id="audio" src="audio/wildjunglewithhighttree.mp3" loop></audio>
+                </figure>
+            </div>
+        </div>
+    </header>
+
+    <div class="cultureNews center">
+        <section class="extraction">
+            <h1 class="extraction__title">Производство какао и шоколада</h1>
+            <ul class="extraction__list">
+                <li class="extraction__list-item product1">Описание процесса производства какао-бобов от сбора до
+                    ферментации.
+                    <p class="extraction__list-text">Технология изготовления шоколада, включая обжарку, измельчение,
+                        темперирование и формовку</p>
+                </li>
+                <div class="article-full" style="display: none;">
+                    <h2>Описание процесса производства какао-бобов от сбора до ферментации.</h2>
+                    <p>Технология изготовления шоколада, включая обжарку, измельчение, темперирование и формовку. Lorem,
+                        ipsum dolor sit amet consectetur adipisicing elit. Optio eius molestiae ea consectetur, saepe
+                        fuga dignissimos laborum doloremque atque totam assumenda eligendi officia maiores modi sit?
+                        Excepturi ea est deserunt ab magni expedita? Nemo molestias natus laudantium, eligendi libero
+                        officiis ab odio expedita voluptas. Eveniet quos vitae ut odit possimus?
+                        <button class="article-button">Закрыть</button>
+                    </p>
+                </div>
+
+                <li class="extraction__list-item product2">Технология изготовления шоколада, включая обжарку,
+                    измельчение, темперирование и формовку</li>
+                <li class="extraction__list-item product3">Роль различных ингредиентов <br />(какао-масло, сахар, молоко
+                    и т.д.) в производстве</li>
+            </ul>
+        </section>
+
+        <section class="cocoaTypes">
+            <h1 class="cocoaTypes__title">Виды и сорта какао-бобов</h1>
+            <ul class="cocoaTypes__list">
+                <li class="cocoaTypes__list-item product4">Классификация какао-бобов по регионам произрастания (Африка,
+                    Южная
+                    Америка, Азия)
+
+                </li>
+                <li class="cocoaTypes__list-item product5">Характеристики и особенности вкуса различных сортов
+                    какао-бобов</li>
+                <li class="cocoaTypes__list-item product6">Влияние сорта на качество и вкус шоколада</li>
+            </ul>
+
+        </section>
+    </div>
+
+
+    <footer class="footer center">
+        <div class="copyright">&copy; Emma Lebedeva & VP, 2024</div>
+        <img class="footer__img" src="img/footercenter.png" alt="">
+        <div class="contacts">
+            <div class="email">
+                <img class="contacts__img mail" src="img/email2.png" alt="Знак почты">
+                <p class="contacts__text">universeofcacao@gmail.com</p>
+            </div>
+            <a class="social" href="https://t.me/universeofcacao" target="_blank">
+                <img class="contacts__img" src="img/TG.png" alt="Телеграм">
+                <p class="social__text">universeofcacao</p>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        const listItem = document.querySelector('.extraction__list-item');
+        const articleFull = document.querySelector('.article-full');
+
+        listItem.addEventListener('click', () => {
+            articleFull.style.display = 'block';
+            listItem.style.display = 'none';
+        });
+
+        const closeButton = document.querySelector('.article-button');
+        closeButton.addEventListener('click', () => {
+            articleFull.style.display = 'none';
+            listItem.style.display = 'block';
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Какао и Шоколад: путь к Здоровью и Удовольствию</title>
+</head>
+
+<body>
+    <header class="header center">
+        <div class="header__left">
+            <img class="header__imgMenu" src="img/burgermenu.png" alt="меню">
+            <div class="header__menu">
+                <h3 class="header__menu-title">Мир какао</h3>
+                <!-- (о какао и шоколаде): польза, состав и эффекты -->
+                <a href="about.html" class="header__menu-link">Шоколадные секреты</a>
+                <a href="history.html" class="header__menu-link">История какао</a>
+                <a href="news.html" class="header__menu-link">Какао новости</a>
+                <!-- рецепты: -->
+                <a href="recipes.html" class="header__menu-link">Какао и Шоколад: путь к Здоровью и Удовольствию</a>
+                <a href="culture.html" class="header__menu-link">Культура какао сегодня</a>
+            </div>
+        </div>
+        <a class="header__center" href="index.html">
+            <img class="header__center-logo" src="img/logo.png" alt="Логотип какао">
+        </a>
+        <div class="header__right">
+            <div class="header__right-menu">
+                <figure class="music">
+                    <figcaption class="music__text">Listen wild jungles</figcaption>
+                    <img class="music__img" src="img/sound.png" alt="Знак динамика"
+                        onclick="document.querySelector('audio').play()"
+                        ondblclick="document.querySelector('audio').pause()">
+                    <span class="music__img-text">click once to play and twice to stop</span>
+                    <audio id="audio" src="audio/wildjunglewithhighttree.mp3" loop></audio>
+                </figure>
+            </div>
+        </div>
+    </header>
+
+    <div class="recipesBox center">
+        <h1 class="recipesBox__title">Какао и Шоколад: путь к Здоровью и Удовольствию</h1>
+
+        <div class="topic">
+            <p>Какао — напиток, в состав которого обязательно входит размолотое какао, а также молоко (или вода) и подсластитель.</p>
+        </div>
+
+        <article class="topic"></article>
+        <article class="topic"></article>
+        <article class="topic"></article>
+        <article class="topic"></article>
+    </div>
+
+    <footer class="footer center">
+        <div class="copyright">&copy; Emma Lebedeva & VP, 2024</div>
+        <img class="footer__img" src="img/footercenter.png" alt="">
+        <div class="contacts">
+            <div class="email">
+                <img class="contacts__img mail" src="img/email2.png" alt="Знак почты">
+                <p class="contacts__text">universeofcacao@gmail.com</p>
+            </div>
+            <a class="social" href="https://t.me/universeofcacao" target="_blank">
+                <img class="contacts__img" src="img/TG.png" alt="Телеграм">
+                <p class="social__text">universeofcacao</p>
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -14,11 +14,13 @@
             <img class="header__imgMenu" src="img/burgermenu.png" alt="меню">
             <div class="header__menu">
                 <h3 class="header__menu-title">Мир какао</h3>
-                <a href="about.html" class="header__menu-link">Какао и Шоколад: путь к Здоровью и Удовольствию</a>
+                <!-- (о какао и шоколаде): польза, состав и эффекты -->
+                <a href="about.html" class="header__menu-link">Шоколадные секреты</a>
                 <a href="history.html" class="header__menu-link">История какао</a>
-                <a href="news.html" class="header__menu-link">Новости какао</a>
-                <a href="recipes.html" class="header__menu-link">Рецепты с какао и шоколадом</a>
-                <a href="index.html" class="header__menu-linkhead">На главную</a>
+                <a href="news.html" class="header__menu-link">Какао новости</a>
+                <!-- рецепты: -->
+                <a href="recipes.html" class="header__menu-link">Какао и Шоколад: путь к Здоровью и Удовольствию</a>
+                <a href="culture.html" class="header__menu-link">Культура какао сегодня</a>
             </div>
         </div>
         <a class="header__center" href="#">
@@ -39,15 +41,35 @@
     </header>
     <div class="top center">
         <div class="top__box">
-            <div class="calendar">
-                <div class="calendar__boxImages">
-                    <img id="calendarOuterRing" src="img/calendarOuterRing.png" alt="Каменный календарь майя (ободок)">
-                    <img id="calendarInnerRing" src="img/calendarInnerRing.png"
-                        alt="Каменный календарь майя (внутрення часть)">
+            <div class="controller">
+                <div class="controller-left">
+                    <a href='about.html'>
+                        <img class="controller__img" src="img/talking3.png" alt="Мужчина рассказывает о какао">
+                    </a>
+                    <a href='news.html'>
+                        <img class="controller__img" src="img/newsrunner2.png" alt="Мужчина рассказывает о какао">
+                    </a>
                 </div>
-                <canvas id="canvas"></canvas>
-                <div class="calendar__background"></div>
+                <div class="calendar">
+                    <div class="calendar__boxImages">
+                        <img id="calendarOuterRing" src="img/calendarOuterRing.png"
+                            alt="Каменный календарь майя (ободок)">
+                        <img id="calendarInnerRing" src="img/calendarInnerRing.png"
+                            alt="Каменный календарь майя (внутрення часть)">
+                    </div>
+                    <canvas id="canvas"></canvas>
+                    <div class="calendar__background"></div>
+                </div>
+                <div class="controller-right">
+                    <a href='recipes.html'>
+                        <img class="controller__img" src="img/recipes1.png" alt="Мужчина рассказывает о какао">
+                    </a>
+                    <a href='culture.html'>
+                        <img class="controller__img" src="img/harvesting.png" alt="Мужчина рассказывает о какао">
+                    </a>
+                </div>
             </div>
+
         </div>
     </div>
 
@@ -80,7 +102,6 @@
         const calendarBoxImages = document.querySelector('.calendar__boxImages');
         const calendarOuterRing = document.querySelector('#calendarOuterRing');
         const calendarInnerRing = document.querySelector('#calendarInnerRing');
-        const topBox = document.querySelector('.top__box');
         const calendarBackground = document.querySelector('.calendar__background');
         const canvas = document.getElementById('canvas');
 
