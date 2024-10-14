@@ -12,15 +12,17 @@
     <header class="header center">
         <div class="header__left">
             <img class="header__imgMenu" src="img/burgermenu.png" alt="меню">
-            <div class="header__menu">
-                <h3 class="header__menu-title">Мир какао</h3>
-                <!-- (о какао и шоколаде): польза, состав и эффекты -->
-                <a href="about.html" class="header__menu-link">Шоколадные секреты</a>
-                <a href="history.html" class="header__menu-link">История какао</a>
-                <a href="news.html" class="header__menu-link">Какао новости</a>
-                <!-- рецепты: -->
-                <a href="recipes.html" class="header__menu-link">Какао и Шоколад: путь к Здоровью и Удовольствию</a>
-                <a href="culture.html" class="header__menu-link">Культура какао сегодня</a>
+            <div class="header__menu-box">
+                <div class="header__menu">
+                    <a href="index.html" class="header__menu-link first">Главная</a>
+                    <a href="about.html" class="header__menu-link">Шоколадные секреты</a>
+                    <a href="history.html" class="header__menu-link">История какао</a>
+                    <a href="news.html" class="header__menu-link">Какао новости</a>
+                    <a href="culture.html" class="header__menu-link">Культура какао сегодня</a>
+                    <a href="recipes.html" class="header__menu-link">Какао и Шоколад:<br /> путь к Здоровью и
+                        Удовольствию</a>
+                </div>
+                <button class="header__menu-button">Закрыть</button>
             </div>
         </div>
         <a class="header__center" href="#">
@@ -44,10 +46,10 @@
             <div class="controller">
                 <div class="controller-left">
                     <a href='about.html'>
-                        <img class="controller__img" src="img/talking3.png" alt="Мужчина рассказывает о какао">
+                        <img class="controller__img" src="img/talking.png" alt="Мужчина племени майя рассказывает о какао">
                     </a>
                     <a href='news.html'>
-                        <img class="controller__img" src="img/newsrunner2.png" alt="Мужчина рассказывает о какао">
+                        <img class="controller__img" src="img/herald.png" alt="Майянский мужчина бежит по джунглям с табличкой с новостями">
                     </a>
                 </div>
                 <div class="calendar">
@@ -62,17 +64,16 @@
                 </div>
                 <div class="controller-right">
                     <a href='recipes.html'>
-                        <img class="controller__img" src="img/recipes1.png" alt="Мужчина рассказывает о какао">
+                        <img class="controller__img" src="img/recipes.png" alt="Женщина в традиционной одежде готовит на кухне шоколадный десерт">
                     </a>
                     <a href='culture.html'>
-                        <img class="controller__img" src="img/harvesting.png" alt="Мужчина рассказывает о какао">
+                        <img class="controller__img" src="img/harvesting.png" alt="Мужчина в тропическом саду собирает какао плоды">
                     </a>
                 </div>
             </div>
 
         </div>
     </div>
-
     <footer class="footer center">
         <div class="copyright">&copy; Emma Lebedeva & VP, 2024</div>
         <img class="footer__img" src="img/footercenter.png" alt="">
@@ -89,8 +90,9 @@
 
 
     </footer>
-    <script type="text/javascript">
 
+    <script src="headerMenuStyle.js"></script>
+    <script>
         function changePage() {
             window.location.href = "history.html";
         }
@@ -124,13 +126,13 @@
         const gl = canvas.getContext('webgl');
 
         // Устанавливаем размеры канваса равными размерам изображения
-        canvas.width = '510'; // image.width;
-        canvas.height = '545'; // image.height;
+        canvas.width = '526'; // image.width;
+        canvas.height = '529'; // image.height;
 
         // Убедитесь, что канвас имеет те же размеры, что и изображение
         calendarBoxImages.onload = () => {
-            canvas.width = '510'; // image.width;
-            canvas.height = '545'; // image.height;
+            canvas.width = '526'; // image.width;
+            canvas.height = '529'; // image.height;
         };
 
         const vertexShaderSource = `
@@ -273,9 +275,9 @@
             canvas.classList.remove('active');
         });
 
-        calendarInnerRing.addEventListener('click', () => {
-            canvas.classList.remove('active');
-        });
+        // calendarInnerRing.addEventListener('click', () => {
+        //     canvas.classList.remove('active');
+        // });
 
         function draw() {
             gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
@@ -290,7 +292,17 @@
 
         requestAnimationFrame(draw);
 
+        // const headerImgMenu = document.querySelector('.header__imgMenu');
+        // const headMenu = document.querySelector('.header__menu-box');
 
+        // headerImgMenu.addEventListener('click', () => {
+        //     headMenu.style.display = 'flex';
+        //  });
+
+        // const closeMenuButton = document.querySelector('.header__menu-button');
+        // closeMenuButton.addEventListener('click', () => {
+        //     headMenu.style.display = 'none';
+        // });
 
     </script>
 </body>

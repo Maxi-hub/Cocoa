@@ -18,15 +18,17 @@
         <header class="header center">
             <div class="header__left">
                 <img class="header__imgMenu" src="img/burgermenu.png" alt="меню">
-                <div class="header__menu">
-                    <h3 class="header__menu-title">Мир какао</h3>
-                    <!-- (о какао и шоколаде): польза, состав и эффекты -->
-                    <a href="about.html" class="header__menu-link">Шоколадные секреты</a>
-                    <a href="history.html" class="header__menu-link">История какао</a>
-                    <a href="news.html" class="header__menu-link">Какао новости</a>
-                    <!-- рецепты: -->
-                    <a href="recipes.html" class="header__menu-link">Какао и Шоколад: путь к Здоровью и Удовольствию</a>
-                    <a href="culture.html" class="header__menu-link">Культура какао сегодня</a>
+                <div class="header__menu-box">
+                    <div class="header__menu">
+                        <a href="index.html" class="header__menu-link first">Главная</a>
+                        <a href="about.html" class="header__menu-link">Шоколадные секреты</a>
+                        <a href="history.html" class="header__menu-link">История какао</a>
+                        <a href="news.html" class="header__menu-link">Какао новости</a>
+                        <a href="culture.html" class="header__menu-link">Культура какао сегодня</a>
+                        <a href="recipes.html" class="header__menu-link">Какао и Шоколад:<br /> путь к Здоровью и
+                            Удовольствию</a>
+                    </div>
+                    <button class="header__menu-button">Закрыть</button>
                 </div>
             </div>
             <a class="header__center" href="index.html">
@@ -258,7 +260,7 @@
             </div>
         </div>
         <div>
-            <a target="_blank" href="https://icons8.com/icon/48188/natural-user-interface-2">Touch</a> icon by 
+            <a target="_blank" href="https://icons8.com/icon/48188/natural-user-interface-2">Touch</a> icon by
             <a target="_blank" href="https://icons8.com">Icons8</a>
         </div>
 
@@ -280,7 +282,68 @@
     <div class="block-button">
         <button class="button-skip">Пропустить заставку</button>
     </div>
-    <script src="script.js"></script>
+    <script src="headerMenuStyle.js"></script>
+    <script>
+        const textBlock = document.querySelectorAll('.about__box');
+        const buttonEl = document.querySelector('.button-skip');
+        const headerEL = document.querySelector('.header');
+        const wrapperBlock = document.querySelector('.wrapper');
+        const wallpaperBlock = document.querySelector('.wallpaper');
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const zoomWallpaper = setTimeout(() => {
+                const img = document.querySelector(".wallpaper__img");
+                img.classList.add("zoom-in");
+                headerEL.style.display = 'none';
+            }, 7000);
+
+            const appearPage = setTimeout(() => {
+                wallpaperBlock.style.display = 'none';
+                wrapperBlock.style.display = 'inline-block';
+
+                window.scrollTo({
+                    top: 10,
+                    left: 0,
+                    behavior: "smooth",
+                });
+
+            }, 10000);
+
+            const appearHeader = setTimeout(() => {
+                headerEL.style.display = 'flex';
+                headerEL.style.animation = 'show 5s';
+            }, 13000);
+
+            buttonEl.addEventListener('click', function (e) {
+                wallpaperBlock.style.display = 'none';
+                wrapperBlock.style.animation = 'show 3s';
+                wrapperBlock.style.display = 'inline-block';
+                headerEL.style.display = 'flex';
+                headerEL.style.animation = 'show 4s';
+
+                window.scrollTo({
+                    top: 220,
+                    left: 0,
+                    behavior: "smooth",
+                });
+
+                clearTimeout(zoomWallpaper);
+                clearTimeout(appearPage);
+                clearTimeout(appearHeader);
+            });
+        });
+
+        textBlock.forEach(text => {
+            text.addEventListener('click', () => {
+                text.classList.toggle('visible');
+                text.style.cursor = 'default';
+            });
+
+            text.addEventListener('mouseenter', () => {
+                text.style.cursor = 'url(img/cursor-touch.png), auto';
+            });
+        });
+    </script>
 </body>
 
 </html>

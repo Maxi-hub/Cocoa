@@ -7,7 +7,7 @@ const wallpaperBlock = document.querySelector('.wallpaper');
 document.addEventListener("DOMContentLoaded", () => {
     const zoomWallpaper = setTimeout(() => {
         const img = document.querySelector(".wallpaper__img");
-        img.classList.add("zoom-in"); 
+        img.classList.add("zoom-in");
         headerEL.style.display = 'none';
     }, 7000);
 
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             behavior: "smooth",
         });
 
-    }, 10000); // 10000 миллисекунд = 10 секунд
+    }, 10000);
 
     const appearHeader = setTimeout(() => {
         headerEL.style.display = 'flex';
@@ -59,7 +59,17 @@ textBlock.forEach(text => {
 });
 
 
+const headerImgMenu = document.querySelector('.header__imgMenu');
+const headMenu = document.querySelector('.header__menu-box');
 
-// array.forEach(element => {
-    
-// });
+headerImgMenu.addEventListener('click', () => {
+    headMenu.style.display = 'flex';
+});
+
+const closeMenuButton = document.querySelector('.header__menu-button');
+closeMenuButton.addEventListener('click', () => {
+    headMenu.style.display = 'none';
+});
+
+
+

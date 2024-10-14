@@ -12,15 +12,17 @@
     <header class="header center">
         <div class="header__left">
             <img class="header__imgMenu" src="img/burgermenu.png" alt="меню">
-            <div class="header__menu">
-                <h3 class="header__menu-title">Мир какао</h3>
-                <!-- (о какао и шоколаде): польза, состав и эффекты -->
-                <a href="about.html" class="header__menu-link">Шоколадные секреты</a>
-                <a href="history.html" class="header__menu-link">История какао</a>
-                <a href="news.html" class="header__menu-link">Какао новости</a>
-                <!-- рецепты: -->
-                <a href="recipes.html" class="header__menu-link">Какао и Шоколад: путь к Здоровью и Удовольствию</a>
-                <a href="culture.html" class="header__menu-link">Культура какао сегодня</a>
+            <div class="header__menu-box">
+                <div class="header__menu">
+                    <a href="index.html" class="header__menu-link first">Главная</a>
+                    <a href="about.html" class="header__menu-link">Шоколадные секреты</a>
+                    <a href="history.html" class="header__menu-link">История какао</a>
+                    <a href="news.html" class="header__menu-link">Какао новости</a>
+                    <a href="culture.html" class="header__menu-link">Культура какао сегодня</a>
+                    <a href="recipes.html" class="header__menu-link">Какао и Шоколад:<br /> путь к Здоровью и
+                        Удовольствию</a>
+                </div>
+                <button class="header__menu-button">Закрыть</button>
             </div>
         </div>
         <a class="header__center" href="index.html">
@@ -39,51 +41,111 @@
             </div>
         </div>
     </header>
-
-    <div class="cultureNews center">
-        <section class="extraction">
-            <h1 class="extraction__title">Производство какао и шоколада</h1>
+    <div class="cultureNews">
+        <h1 class="cultureNews__title">Какао культура сегодня</h1>
+        <h3 class="cultureNews__subtitle">Подробности о процессе производства шоколада, от сбора какао-бобов до упаковки
+            готового продукта<br /> Тенденции и инновации в индустрии шоколада</h3>
+        <section class="extraction center">
+            <h2 class="extraction__title">Производство какао и шоколада</h2>
             <ul class="extraction__list">
                 <li class="extraction__list-item product1">Описание процесса производства какао-бобов от сбора до
                     ферментации.
-                    <p class="extraction__list-text">Технология изготовления шоколада, включая обжарку, измельчение,
-                        темперирование и формовку</p>
+                    <div class="article-full">
+                        <h2>Описание процесса производства какао-бобов от сбора до ферментации.</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio eius molestiae ea
+                            consectetur,
+                            saepe
+                            fuga dignissimos laborum doloremque atque totam assumenda eligendi officia maiores modi sit?
+                            Excepturi ea est deserunt ab magni expedita? Nemo molestias natus laudantium, eligendi
+                            libero
+                            officiis ab odio expedita voluptas. Eveniet quos vitae ut odit possimus?
+                            <button class="article-button">Закрыть</button>
+                        </p>
+                    </div>
                 </li>
-                <div class="article-full" style="display: none;">
-                    <h2>Описание процесса производства какао-бобов от сбора до ферментации.</h2>
-                    <p>Технология изготовления шоколада, включая обжарку, измельчение, темперирование и формовку. Lorem,
-                        ipsum dolor sit amet consectetur adipisicing elit. Optio eius molestiae ea consectetur, saepe
-                        fuga dignissimos laborum doloremque atque totam assumenda eligendi officia maiores modi sit?
-                        Excepturi ea est deserunt ab magni expedita? Nemo molestias natus laudantium, eligendi libero
-                        officiis ab odio expedita voluptas. Eveniet quos vitae ut odit possimus?
-                        <button class="article-button">Закрыть</button>
-                    </p>
-                </div>
-
                 <li class="extraction__list-item product2">Технология изготовления шоколада, включая обжарку,
-                    измельчение, темперирование и формовку</li>
+                    измельчение, темперирование и формовку
+                    <div class="article-full">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio eius molestiae ea
+                            consectetur,
+                            saepe
+                            fuga dignissimos laborum doloremque atque totam assumenda eligendi officia maiores modi sit?
+                            Excepturi ea est deserunt ab magni expedita? Nemo molestias natus laudantium, eligendi
+                            libero
+                            officiis ab odio expedita voluptas. Eveniet quos vitae ut odit possimus?
+                            <button class="article-button">Закрыть</button>
+                        </p>
+                    </div>
+                </li>
                 <li class="extraction__list-item product3">Роль различных ингредиентов <br />(какао-масло, сахар, молоко
-                    и т.д.) в производстве</li>
+                    и т.д.) в производстве
+                    <div class="article-full">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio eius molestiae ea
+                            consectetur,
+                            saepe
+                            fuga dignissimos laborum doloremque atque totam assumenda eligendi officia maiores modi sit?
+                            Excepturi ea est deserunt ab magni expedita? Nemo molestias natus laudantium, eligendi
+                            libero
+                            officiis ab odio expedita voluptas. Eveniet quos vitae ut odit possimus?
+                            <button class="article-button">Закрыть</button>
+                        </p>
+                    </div>
+                </li>
             </ul>
         </section>
 
-        <section class="cocoaTypes">
-            <h1 class="cocoaTypes__title">Виды и сорта какао-бобов</h1>
+        <section class="cocoaTypes center">
+            <h2 class="cocoaTypes__title">Виды и сорта какао-бобов</h2>
             <ul class="cocoaTypes__list">
                 <li class="cocoaTypes__list-item product4">Классификация какао-бобов по регионам произрастания (Африка,
                     Южная
                     Америка, Азия)
-
+                    <div class="article-full">
+                        <h2>Описание процесса производства какао-бобов от сбора до ферментации.</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio eius molestiae ea
+                            consectetur,
+                            saepe
+                            fuga dignissimos laborum doloremque atque totam assumenda eligendi officia maiores modi sit?
+                            Excepturi ea est deserunt ab magni expedita? Nemo molestias natus laudantium, eligendi
+                            libero
+                            officiis ab odio expedita voluptas. Eveniet quos vitae ut odit possimus?
+                            <button class="article-button">Закрыть</button>
+                        </p>
+                    </div>
                 </li>
                 <li class="cocoaTypes__list-item product5">Характеристики и особенности вкуса различных сортов
-                    какао-бобов</li>
-                <li class="cocoaTypes__list-item product6">Влияние сорта на качество и вкус шоколада</li>
+                    какао-бобов
+                    <div class="article-full">
+                        <h2>Описание процесса производства какао-бобов от сбора до ферментации.</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio eius molestiae ea
+                            consectetur,
+                            saepe
+                            fuga dignissimos laborum doloremque atque totam assumenda eligendi officia maiores modi sit?
+                            Excepturi ea est deserunt ab magni expedita? Nemo molestias natus laudantium, eligendi
+                            libero
+                            officiis ab odio expedita voluptas. Eveniet quos vitae ut odit possimus?
+                            <button class="article-button">Закрыть</button>
+                        </p>
+                    </div>
+                </li>
+                <li class="cocoaTypes__list-item product6">Влияние сорта на качество и вкус шоколада
+                    <div class="article-full">
+                        <h2>Описание процесса производства какао-бобов от сбора до ферментации.</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio eius molestiae ea
+                            consectetur,
+                            saepe
+                            fuga dignissimos laborum doloremque atque totam assumenda eligendi officia maiores modi sit?
+                            Excepturi ea est deserunt ab magni expedita? Nemo molestias natus laudantium, eligendi
+                            libero
+                            officiis ab odio expedita voluptas. Eveniet quos vitae ut odit possimus?
+                            <button class="article-button">Закрыть</button>
+                        </p>
+                    </div>
+                </li>
             </ul>
 
         </section>
     </div>
-
-
     <footer class="footer center">
         <div class="copyright">&copy; Emma Lebedeva & VP, 2024</div>
         <img class="footer__img" src="img/footercenter.png" alt="">
@@ -98,21 +160,42 @@
             </a>
         </div>
     </footer>
-
+    <script src="headerMenuStyle.js"></script>
     <script>
-        const listItem = document.querySelector('.extraction__list-item');
-        const articleFull = document.querySelector('.article-full');
+        const extractionList = document.querySelectorAll('.extraction__list');
+        extractionList.forEach(item => {
+            item.addEventListener('click', (e) => {
 
-        listItem.addEventListener('click', () => {
-            articleFull.style.display = 'block';
-            listItem.style.display = 'none';
-        });
+                const articleFull = item.querySelector('.article-full');
+                articleFull.style.display = 'flex';
 
-        const closeButton = document.querySelector('.article-button');
-        closeButton.addEventListener('click', () => {
-            articleFull.style.display = 'none';
-            listItem.style.display = 'block';
-        });
+                const closeButton = articleFull.querySelector('.article-button');
+                closeButton.addEventListener('click', () => {
+                    event.stopPropagation();
+                    articleFull.style.display = 'none';
+                });
+            })
+        })
+
+        const cocoaTypesList = document.querySelectorAll('.cocoaTypes__list');
+        cocoaTypesList.forEach(item => {
+            item.addEventListener('click', (e) => {
+
+                const articleFull = item.querySelector('.article-full');
+                articleFull.style.display = 'flex';
+
+                const closeButton = articleFull.querySelector('.article-button');
+                closeButton.addEventListener('click', () => {
+                    event.stopPropagation();
+                    articleFull.style.display = 'none';
+                });
+            })
+        })
+
+        
+
+
+
 
     </script>
 </body>
