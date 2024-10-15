@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @keyframes rotate-90-cw {
   0% {
     transform: rotate(0);
@@ -114,7 +113,7 @@ body {
   cursor: pointer;
 }
 .header__menu-box {
-  background-image: url(img/woman3.png);
+  background-image: url(img/woman.png);
   background-size: cover;
   position: fixed;
   top: 0px;
@@ -328,12 +327,19 @@ body {
 .about__box {
   margin-top: 25px;
   margin-bottom: 50px;
-  padding-top: 25px;
-  padding-bottom: 30px;
+  padding: 25px 25px 30px;
   opacity: 0.1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .about__box-title {
   padding-bottom: 10px;
+}
+
+.padding-top {
+  padding-top: 30px;
 }
 
 .cursor {
@@ -367,10 +373,6 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
   background: #F7E7DB;
-  box-sizing: border-box;
-}
-.info__item {
-  position: relative;
 }
 .info__mainTitle {
   display: flex;
@@ -383,7 +385,7 @@ body {
   justify-content: center;
 }
 .info__title {
-  font-size: 30px;
+  font-size: 28px;
   padding-bottom: 10px;
   padding-left: 10px;
   list-style: url(img/bob.png);
@@ -391,20 +393,40 @@ body {
 }
 .info__title-inner {
   display: inline-block;
-  /* Позволяет использовать margin */
   margin-top: -5px;
 }
 .info__box {
   padding-bottom: 50px;
-  align-items: center;
+  text-align: justify;
+}
+.info__box-img {
+  margin-bottom: 20px;
 }
 .info__item-img {
   float: left;
   margin-right: 17px;
   margin-top: -7px;
 }
-.info__text {
-  margin-top: 7px;
+.info__article {
+  margin-top: 11px;
+}
+.info__article-subtitle {
+  font-weight: bold;
+  padding-top: 10px;
+}
+.info__article-list {
+  margin-left: 20px;
+}
+
+.indent {
+  text-indent: 50px;
+}
+
+.box1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .linkBox {
@@ -469,10 +491,18 @@ body {
   font-weight: bold;
   color: rgb(92, 50, 17);
 }
-.news-box .sourse {
+.news-box__block {
+  margin-bottom: 30px;
+}
+
+.sourse {
   color: #969595;
   font-size: 15px;
   font-style: italic;
+}
+
+.sourse-margin {
+  margin-top: -30px;
 }
 
 .navigation {
@@ -518,7 +548,7 @@ body {
   text-align: center;
   padding: 15px;
   font-size: 20px;
-  background-color: aqua;
+  background-color: rgba(0, 255, 255, 0.5411764706);
   display: flex;
   align-items: center;
   border-radius: 20px;
@@ -575,7 +605,7 @@ body {
   text-align: center;
   padding: 15px;
   font-size: 20px;
-  background-color: orange;
+  background-color: rgba(255, 165, 0, 0.7411764706);
   display: flex;
   align-items: center;
   border-radius: 20px;

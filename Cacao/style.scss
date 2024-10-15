@@ -152,7 +152,7 @@ body {
     }
 
     &__menu-box {
-        background-image: url(img/woman3.png);
+        background-image: url(img/woman.png);
         background-size: cover;
         position: fixed;
         top: 0px;
@@ -387,14 +387,21 @@ body {
     &__box {
         margin-top: 25px;
         margin-bottom: 50px;
-        padding-top: 25px;
-        padding-bottom: 30px;
+        padding: 25px 25px 30px;
         opacity: 0.1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     &__box-title {
         padding-bottom: 10px;
     }
+}
+
+.padding-top {
+    padding-top: 30px;
 }
 
 .cursor {
@@ -428,11 +435,6 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
     background: #F7E7DB;
-    box-sizing: border-box;
-
-    &__item {
-        position: relative;
-    }
 
     &__mainTitle {
         display: flex;
@@ -447,7 +449,7 @@ body {
     }
 
     &__title {
-        font-size: 30px;
+        font-size: 28px;
         padding-bottom: 10px;
         padding-left: 10px;
         list-style: url(img/bob.png);
@@ -456,13 +458,16 @@ body {
 
     &__title-inner {
         display: inline-block;
-        /* Позволяет использовать margin */
         margin-top: -5px;
     }
 
     &__box {
         padding-bottom: 50px;
-        align-items: center;
+        text-align: justify;
+    }
+
+    &__box-img {
+        margin-bottom: 20px;
     }
 
     &__item-img {
@@ -471,11 +476,29 @@ body {
         margin-top: -7px;
     }
 
-    &__text {
-        margin-top: 7px;
+    &__article {
+        margin-top: 11px;
     }
 
+    &__article-subtitle {
+        font-weight: bold;
+        padding-top: 10px;
+    }
 
+    &__article-list {
+        margin-left: 20px;
+    }
+}
+
+.indent {
+    text-indent: 50px;
+}
+
+.box1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .linkBox {
@@ -551,11 +574,19 @@ body {
         }
     }
 
-    .sourse {
-        color: #969595;
-        font-size: 15px;
-        font-style: italic;
+    &__block {
+        margin-bottom: 30px;
     }
+}
+
+.sourse {
+    color: #969595;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.sourse-margin {
+    margin-top: -30px;
 }
 
 .navigation {
@@ -605,7 +636,7 @@ body {
         text-align: center;
         padding: 15px;
         font-size: 20px;
-        background-color: aqua;
+        background-color: #00ffff8a;
         display: flex;
         align-items: center;
         border-radius: 20px;
@@ -632,10 +663,6 @@ body {
     display: none;
     flex-direction: column;
 }
-
-// .article-full h2 {
-//     margin-top: 0;
-// }
 
 .article-button {
     position: absolute;
@@ -672,7 +699,7 @@ body {
         text-align: center;
         padding: 15px;
         font-size: 20px;
-        background-color: orange;
+        background-color: #ffa500bd;
         display: flex;
         align-items: center;
         border-radius: 20px;
