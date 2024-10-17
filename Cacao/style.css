@@ -1,11 +1,9 @@
-@keyframes rotate-90-cw {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(90deg);
-  }
-}
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
 @keyframes show {
   from {
     opacity: 0;
@@ -208,6 +206,9 @@ body {
 .top {
   background-image: url(img/jungle.png);
   background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .controller {
@@ -854,4 +855,66 @@ body {
 .footer .social:hover {
   cursor: pointer;
   color: gold;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: calc(50% - 383px);
+    padding-right: calc(50% - 383px);
+  }
+  .header {
+    height: 120px;
+    justify-content: space-around;
+  }
+  .header__left {
+    width: 100px;
+    margin-right: 30px;
+  }
+  .header__imgMenu {
+    width: 70px;
+    height: 54px;
+  }
+  .header__center-logo {
+    width: 260px;
+    height: 110px;
+  }
+  .header .music__text {
+    font-size: 10px;
+    line-height: 10px;
+    margin-bottom: 5px;
+  }
+  .header .music__img {
+    width: 30px;
+    height: 27px;
+  }
+  .header .music__img-text {
+    width: 70px;
+    padding: 3px;
+    bottom: -76%;
+    font-size: 8px;
+  }
+  .header__menu {
+    gap: 30px;
+    margin: 75px 0 0 60px;
+  }
+  .header__menu-box {
+    background-image: url(img/woman-mobile.png);
+    background-size: cover;
+  }
+  .header__menu-link:first-child {
+    padding-left: 50px;
+  }
+  .header__menu-link:nth-child(2n+1) {
+    padding-left: 30px;
+  }
+  .header__menu-link {
+    font-size: 14px;
+  }
+  .header__menu-button {
+    font-size: 12px;
+    padding: 7px;
+    margin: 15px;
+    top: 5px;
+    left: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

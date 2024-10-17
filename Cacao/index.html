@@ -45,11 +45,13 @@
         <div class="top__box">
             <div class="controller">
                 <div class="controller-left">
-                    <a href='about.html'>
-                        <img class="controller__img" src="img/talking.png" alt="Мужчина племени майя рассказывает о какао">
+                    <a href="about.html">
+                        <img class="controller__img" src="img/talking.png"
+                            alt="Мужчина племени майя рассказывает о какао">
                     </a>
-                    <a href='news.html'>
-                        <img class="controller__img" src="img/herald.png" alt="Майянский мужчина бежит по джунглям с табличкой с новостями">
+                    <a href="news.html">
+                        <img class="controller__img" src="img/herald.png"
+                            alt="Майянский мужчина бежит по джунглям с табличкой с новостями">
                     </a>
                 </div>
                 <div class="calendar">
@@ -63,11 +65,13 @@
                     <div class="calendar__background"></div>
                 </div>
                 <div class="controller-right">
-                    <a href='recipes.html'>
-                        <img class="controller__img" src="img/recipes.png" alt="Женщина в традиционной одежде готовит на кухне шоколадный десерт">
+                    <a href="recipes.html">
+                        <img class="controller__img" src="img/recipes.png"
+                            alt="Женщина в традиционной одежде готовит на кухне шоколадный десерт">
                     </a>
-                    <a href='culture.html'>
-                        <img class="controller__img" src="img/harvesting.png" alt="Мужчина в тропическом саду собирает какао плоды">
+                    <a href="culture.html">
+                        <img class="controller__img" src="img/harvesting.png"
+                            alt="Мужчина в тропическом саду собирает какао плоды">
                     </a>
                 </div>
             </div>
@@ -82,13 +86,11 @@
                 <img class="contacts__img mail" src="img/email2.png" alt="Знак почты">
                 <p class="contacts__text">universeofcacao@gmail.com</p>
             </div>
-            <a class="social" href="https://t.me/universeofcacao" target="_blank">
+            <a class="social" href="https://t.me/cocoauniverse" target="_blank">
                 <img class="contacts__img" src="img/TG.png" alt="Телеграм">
-                <p class="social__text">universeofcacao</p>
+                <p class="social__text">cocoauniverse</p>
             </a>
         </div>
-
-
     </footer>
 
     <script src="headerMenuStyle.js"></script>
@@ -107,8 +109,6 @@
         const calendarBackground = document.querySelector('.calendar__background');
         const canvas = document.getElementById('canvas');
 
-        // topBox.onclick = function () { };
-
         calendarInnerRing.addEventListener('click', () => {
             delayedFunction(event);
             calendarInnerRing.style.transform = 'scale(0.5)';
@@ -118,21 +118,19 @@
             }, 1500);
 
             setTimeout(() => {
-                calendarBackground.style.transform = 'scale(50)';
+                calendarBackground.style.transform = 'scale(60)';
                 calendarBackground.style.zIndex = '2';
             }, 3500);
         });
 
         const gl = canvas.getContext('webgl');
 
-        // Устанавливаем размеры канваса равными размерам изображения
-        canvas.width = '526'; // image.width;
-        canvas.height = '529'; // image.height;
+        canvas.width = '526';
+        canvas.height = '529';
 
-        // Убедитесь, что канвас имеет те же размеры, что и изображение
         calendarBoxImages.onload = () => {
-            canvas.width = '526'; // image.width;
-            canvas.height = '529'; // image.height;
+            canvas.width = '526'; 
+            canvas.height = '529'; 
         };
 
         const vertexShaderSource = `
@@ -275,10 +273,6 @@
             canvas.classList.remove('active');
         });
 
-        // calendarInnerRing.addEventListener('click', () => {
-        //     canvas.classList.remove('active');
-        // });
-
         function draw() {
             gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
             gl.clearColor(0, 0, 0, 0);
@@ -291,19 +285,6 @@
         }
 
         requestAnimationFrame(draw);
-
-        // const headerImgMenu = document.querySelector('.header__imgMenu');
-        // const headMenu = document.querySelector('.header__menu-box');
-
-        // headerImgMenu.addEventListener('click', () => {
-        //     headMenu.style.display = 'flex';
-        //  });
-
-        // const closeMenuButton = document.querySelector('.header__menu-button');
-        // closeMenuButton.addEventListener('click', () => {
-        //     headMenu.style.display = 'none';
-        // });
-
     </script>
 </body>
 
