@@ -51,9 +51,10 @@
                 <li class="extraction__list-item product1">Описание процесса производства какао-бобов<br />от сбора до
                     упаковки в мешки
                     <div class="article-full">
-                        <h2 class="indentBottom">Описание процесса производства какао-бобов от сбора до упаковки в мешки
+                        <h2 class="article-full__title indentBottom">Описание процесса производства какао-бобов от сбора
+                            до упаковки в мешки
                         </h2>
-                        <img class="indentBottom" src="img/bean_open.png" alt="Раскрытый какао плод">
+                        <img class="article-full__img indentBottom" src="img/bean_open.png" alt="Раскрытый какао плод">
                         <div class="processType">
                             <h3 class="indentBottom">Сбор урожая</h3>
                             <p>Сбор урожая какао — это первый и ключевой этап в производстве шоколада. Он происходит два
@@ -195,13 +196,12 @@
                         </div>
                         <p> Каждый из этих этапов — от сбора урожая до его упаковки — играет важную роль в создании
                             качественного шоколада, который мы все любим.</p>
-                        <button class="article-button">Закрыть</button>
                     </div>
                 </li>
                 <li class="extraction__list-item product2">Технология изготовления шоколада, включая обжарку,
                     измельчение, <br />темперирование и формовку
                     <div class="article-full">
-                        <h2 class="indentBottom">Технология изготовления шоколада, включая обжарку,
+                        <h2 class="article-full__title indentBottom">Технология изготовления шоколада, включая обжарку,
                             измельчение, темперирование и формовку</h2>
                         <p class="indentBottom">Производство шоколада — это целая наука! Давайте разберемся, какие
                             ключевые этапы включает этот
@@ -373,12 +373,11 @@
                                 </li>
                             </ol>
                         </div>
-                        <button class="article-button">Закрыть</button>
                     </div>
                 </li>
                 <li class="extraction__list-item product3">Роль различных ингредиентов <br />в производстве
                     <div class="article-full">
-                        <h2 class="indentBottom">Роль различных ингредиентов в производстве</h2>
+                        <h2 class="article-full__title indentBottom">Роль различных ингредиентов в производстве</h2>
                         <p class="indentBottom">Когда мы говорим о производстве шоколада, мы часто думаем о его сладком
                             вкусе и восхитительном аромате. Но за каждым кусочком шоколада стоят тщательно подобранные
                             ингредиенты, которые играют важную роль в создании этого лакомства. В этой статье мы
@@ -465,7 +464,6 @@
                                 </li>
                             </ol>
                         </div>
-                        <button class="article-button">Закрыть</button>
                     </div>
                 </li>
             </ul>
@@ -478,7 +476,8 @@
                     Южная
                     Америка, Азия)
                     <div class="article-full">
-                        <h2 class="indentBottom">Классификация какао-бобов по регионам произрастания: <br />Африка,
+                        <h2 class="article-full__title indentBottom">Классификация какао-бобов по регионам
+                            произрастания: <br />Африка,
                             Южная Америка и Азия</h2>
                         <p class="indent indentBottom"> Привет, шоколадные гурманы! Задумывались ли вы когда-нибудь о
                             том, откуда берутся ваши
@@ -644,13 +643,13 @@
                             где росли эти удивительные бобы!
                         </p>
                         <p>А какой ваш любимый вид шоколада?</p>
-                        <button class="article-button">Закрыть</button>
                     </div>
                 </li>
                 <li class="cocoaTypes__list-item product5">Характеристики и особенности вкуса различных сортов
                     <br />какао-бобов
                     <div class="article-full">
-                        <h2 class="indentBottom">Характеристики и особенности вкуса различных сортов какао-бобов</h2>
+                        <h2 class="article-full__title indentBottom">Характеристики и особенности вкуса различных сортов
+                            какао-бобов</h2>
                         <p class="indent indentBottom">Шоколад — это не просто сладость, это целая культура, искусство и
                             наука.
                             В центре этого
@@ -810,12 +809,11 @@
                             опыт потребления шоколада. Экспериментируйте с различными сортами, чтобы найти свои
                             любимые
                             сочетания и насладиться разнообразием этого замечательного продукта!</p>
-                        <button class="article-button">Закрыть</button>
                     </div>
                 </li>
                 <li class="cocoaTypes__list-item product6">Влияние сорта на качество<br /> и вкус шоколада
                     <div class="article-full">
-                        <h2 class="indentBottom">Влияние сорта на качество и вкус шоколада</h2>
+                        <h2 class="article-full__title indentBottom">Влияние сорта на качество и вкус шоколада</h2>
                         <p>Шоколад — это не просто лакомство, это настоящая магия, способная поднять настроение и
                             вызвать
                             приятные воспоминания. Но задумывались ли вы когда-нибудь, почему один шоколад так
@@ -1093,7 +1091,6 @@
                             вспомните о том пути, который
                             прошли эти какао-бобы — от тропических лесов до вашего стола! Выбор правильного сорта может
                             сделать ваше наслаждение шоколадом ещё более глубоким и насыщенным.</p>
-                        <button class="article-button">Закрыть</button>
                     </div>
                 </li>
             </ul>
@@ -1122,11 +1119,18 @@
                 const articleFull = item.querySelector('.article-full');
                 articleFull.style.display = 'flex';
 
-                const closeButton = articleFull.querySelector('.article-button');
-                closeButton.addEventListener('click', () => {
+                document.addEventListener('click', function (event) {
                     event.stopPropagation();
-                    articleFull.style.display = 'none';
+                    if (!articleFull.contains(event.target) && !item.contains(event.target)) {
+                        articleFull.style.display = 'none';
+                    }
                 });
+
+                // const closeButton = articleFull.querySelector('.article-button');
+                // closeButton.addEventListener('click', () => {
+                //     event.stopPropagation();
+                //     articleFull.style.display = 'none';
+                // });
             })
         })
 
@@ -1137,11 +1141,18 @@
                 const articleFull = item.querySelector('.article-full');
                 articleFull.style.display = 'flex';
 
-                const closeButton = articleFull.querySelector('.article-button');
-                closeButton.addEventListener('click', () => {
+                document.addEventListener('click', function (event) {
                     event.stopPropagation();
-                    articleFull.style.display = 'none';
+                    if (!articleFull.contains(event.target) && !item.contains(event.target)) {
+                        articleFull.style.display = 'none';
+                    }
                 });
+
+                // const closeButton = articleFull.querySelector('.article-button');
+                // closeButton.addEventListener('click', () => {
+                //     event.stopPropagation();
+                //     articleFull.style.display = 'none';
+                // });
             })
         })
     </script>
