@@ -19,7 +19,7 @@
                     <a href="history.html" class="header__menu-link">История какао</a>
                     <a href="news.html" class="header__menu-link">Какао новости</a>
                     <a href="culture.html" class="header__menu-link">Культура какао сегодня</a>
-                    <a href="recipes.html" class="header__menu-link">Какао и Шоколад:<br /> путь к Здоровью и
+                    <a href="recipes.html" class="header__menu-link">Какао и Шоколад:<br> путь к Здоровью и
                         Удовольствию</a>
                 </div>
                 <button class="header__menu-button">Закрыть</button>
@@ -75,7 +75,6 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </div>
     <footer class="footer center">
@@ -123,14 +122,15 @@
             }, 3500);
         });
 
-        const gl = canvas.getContext('webgl');
 
+
+        const gl = canvas.getContext('webgl');
         canvas.width = '526';
         canvas.height = '529';
 
         calendarBoxImages.onload = () => {
-            canvas.width = '526'; 
-            canvas.height = '529'; 
+            canvas.width = '526';
+            canvas.height = '529';
         };
 
         const vertexShaderSource = `
@@ -268,6 +268,18 @@
             canvas.classList.add('active');
             draw();
         });
+
+        // if (window.innerWidth < 768) {
+        //     calendarInnerRing.removeEventListener('mouseenter', () => {
+        //         canvas.classList.add('active');
+        //         draw();
+        //     });
+        //     calendarOuterRing.removeEventListener('mouseenter', () => {
+        //         canvas.classList.add('active');
+        //         draw();
+        //     });
+        // }
+
 
         calendarOuterRing.addEventListener('mouseout', () => {
             canvas.classList.remove('active');

@@ -201,7 +201,7 @@ body {
 .top {
   background-image: url(img/jungle.png);
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -736,7 +736,7 @@ body {
 
 .topic {
   min-height: 180px;
-  width: 1000px;
+  max-width: 1000px;
   padding: 30px;
   background: #FFF;
   box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
@@ -882,11 +882,12 @@ body {
   }
   .header {
     height: 103px;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
   .header__left {
     display: flex;
     justify-content: center;
+    width: auto;
   }
   .header__imgMenu {
     width: 12vw;
@@ -895,6 +896,9 @@ body {
   .header__center-logo {
     width: 206px;
     height: 103px;
+  }
+  .header__right {
+    width: auto;
   }
   .header .music__text {
     display: none;
@@ -911,22 +915,23 @@ body {
     font-size: 6px;
   }
   .header__menu {
-    gap: 30px;
-    margin: 75px 0 0 60px;
+    gap: 34px;
+    margin: 75px 0 0 30px;
+    width: 46vw;
   }
   .header__menu-box {
     background-image: url(img/woman-mobile.png);
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .header__menu-link:first-child {
-    padding-left: 50px;
+    background-position: center top;
   }
   .header__menu-link:nth-child(2n+1) {
     padding-left: 30px;
   }
+  .header__menu-link:first-child {
+    padding-left: 50px;
+  }
   .header__menu-link {
-    font-size: 14px;
+    font-size: 16px;
   }
   .header__menu-button {
     font-size: 12px;
@@ -934,6 +939,72 @@ body {
     margin: 15px;
     top: 5px;
     left: 20px;
+  }
+  .wallpaper__img {
+    content: url(img/body_history2-mobile.png);
+    width: unset;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: right;
+    object-position: right;
+  }
+  .top {
+    justify-content: center;
+  }
+  .top__box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .controller {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .controller__img {
+    width: 90vw;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  .controller-left {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .calendar {
+    width: 90vw;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  .calendar__boxImages {
+    width: 90vw;
+    height: 90vw;
+    margin-bottom: 20px;
+    padding-left: 4vw;
+  }
+  .calendar__background {
+    width: 75vw;
+    height: 75vw;
+    margin-bottom: 13px;
+    margin-left: 23px;
+  }
+  #calendarOuterRing {
+    height: 90vw;
+  }
+  #calendarInnerRing {
+    width: 75vw;
+    height: unset;
+  }
+  #canvas {
+    width: 90vw;
+    height: 90vw;
+    display: none;
+  }
+  .controller-right {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
   }
   .info {
     padding-top: 15px;
@@ -1023,13 +1094,19 @@ body {
   .sourse-margin {
     margin-top: -14px;
   }
-  .about__block {
+  .about {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  .about__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 94%;
+  }
   .about__title {
-    font-size: 1.6em;
+    font-size: 1.3em;
     padding-top: 15px;
     padding-bottom: 20px;
   }
@@ -1139,8 +1216,24 @@ body {
     right: 0;
     border-radius: 50%;
   }
-  .recipesBox __title {
+  .recipesBox {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  .recipesBox__title {
     font-size: 24px;
+  }
+  .recipesBox_wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .topic {
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px;
+  }
+  .topic__img {
+    width: 300px;
   }
   .recipes {
     gap: 15px;
@@ -1195,5 +1288,13 @@ body {
   .social__text {
     font-size: 13px;
     margin-left: 3px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header__menu {
+    margin: 75px 0 0 20px;
+  }
+  .header__menu-link:nth-child(2n+1) {
+    padding-left: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
