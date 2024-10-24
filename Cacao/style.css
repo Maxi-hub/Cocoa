@@ -408,13 +408,9 @@ body {
   list-style: url(img/bob.png);
   cursor: pointer;
 }
-.info__title-inner {
-  display: inline-block;
-  margin-top: -5px;
-}
 .info__box {
   padding-bottom: 50px;
-  text-align: justify;
+  text-align: left;
 }
 .info__box-img {
   margin-bottom: 20px;
@@ -605,7 +601,7 @@ body {
   display: none;
   flex-direction: column;
   overflow-y: auto;
-  text-align: justify;
+  text-align: left;
   cursor: default;
 }
 .article-full__img {
@@ -623,22 +619,6 @@ body {
 
 .article-button {
   display: none;
-}
-
-.backToTop {
-  width: 20px;
-  height: 20px;
-  border-top: 5px solid #7a295a;
-  border-right: 5px solid #7a295a;
-  margin: 10px 10px 0px 0;
-  border-radius: 10%;
-  transform: rotate(-45deg);
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  display: none;
-  z-index: 1000;
-  transition: all 0.4s ease-in-out;
 }
 
 .processType {
@@ -948,6 +928,10 @@ body {
     -o-object-position: right;
     object-position: right;
   }
+  .wrapper {
+    background-attachment: scroll;
+    background-position: left;
+  }
   .top {
     justify-content: center;
   }
@@ -1019,7 +1003,12 @@ body {
     font-size: 1em;
   }
   .info__item {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .info__item:not([open]):hover {
+    background-color: inherit;
+    border-radius: inherit;
   }
   .info__title {
     font-size: 18px;
@@ -1028,17 +1017,19 @@ body {
   }
   .info__box {
     padding-bottom: 25px;
-    display: flex;
-    flex-direction: column;
   }
   .info__item-img {
     float: none;
     margin-right: 0px;
-    margin-top: -7px;
+    margin-top: 0;
   }
   .info__box-img {
     margin-bottom: 0px;
     width: 88vw;
+  }
+  .box {
+    flex-direction: column;
+    align-items: center;
   }
   .linkBox {
     display: flex;
@@ -1046,8 +1037,18 @@ body {
     align-items: center;
   }
   .linkBox__title {
-    top: 26%;
-    left: 5%;
+    top: 0;
+    left: unset;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #f7daa6;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  }
+  .linkBox__img {
+    content: url(img/cacao_news-mobile.png);
   }
   .newsMenu {
     position: unset;
@@ -1171,6 +1172,9 @@ body {
     padding: 5px;
     border-radius: 10px;
   }
+  .extraction__list-item:hover {
+    animation: inherit;
+  }
   .cocoaTypes {
     margin-bottom: 40px;
   }
@@ -1186,13 +1190,16 @@ body {
     padding: 5px;
     border-radius: 10px;
   }
+  .cocoaTypes__list-item:hover {
+    animation: inherit;
+  }
   .article-full {
     box-sizing: border-box;
     top: 0;
     right: 0;
     width: 100vw;
     height: 100vh;
-    padding: 10px 5px 50px;
+    padding: 10px 5px 60px 10px;
   }
   .article-full__title {
     text-align: left;
@@ -1214,7 +1221,30 @@ body {
     margin: 10px;
     top: 0;
     right: 0;
-    border-radius: 50%;
+    border-radius: 30%;
+  }
+  .arrow-up {
+    width: 30px;
+    height: 30px;
+  }
+  .backToTop {
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 10%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+    font-size: 24px;
+    color: #7a295a;
+    background-color: rgba(248, 232, 203, 0.9529411765);
+    border: none;
+    padding: 22px;
   }
   .recipesBox {
     padding-top: 10px;

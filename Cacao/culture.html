@@ -197,7 +197,7 @@
                         <p> Каждый из этих этапов — от сбора урожая до его упаковки — играет важную роль в создании
                             качественного шоколада, который мы все любим.</p>
                         <button class="article-button">&#10006;</button>
-                        <a href="#" class="backToTop"></a>
+                        <a href="#" class="backToTop">&#129093;</a>
                     </div>
                 </li>
                 <li class="extraction__list-item product2">Технология изготовления шоколада, включая обжарку,
@@ -376,7 +376,7 @@
                             </ol>
                         </div>
                         <button class="article-button">&#10006;</button>
-                        <a href="#" class="backToTop"></a>
+                        <a href="#" class="backToTop">&#129093;</a>
                     </div>
                 </li>
                 <li class="extraction__list-item product3">Роль различных ингредиентов <br>в производстве
@@ -469,7 +469,7 @@
                             </ol>
                         </div>
                         <button class="article-button">&#10006;</button>
-                        <a href="#" class="backToTop"></a>
+                        <a href="#" class="backToTop">&#129093;</a>
                     </div>
                 </li>
             </ul>
@@ -648,7 +648,7 @@
                         </p>
                         <p>А какой ваш любимый вид шоколада?</p>
                         <button class="article-button">&#10006;</button>
-                        <a href="#" class="backToTop"></a>
+                        <a href="#" class="backToTop">&#129093;</a>
                     </div>
                 </li>
                 <li class="cocoaTypes__list-item product5">Характеристики и особенности вкуса различных сортов
@@ -812,7 +812,7 @@
                             любимые
                             сочетания и насладиться разнообразием этого замечательного продукта!</p>
                         <button class="article-button">&#10006;</button>
-                        <a href="#" class="backToTop"></a>
+                        <a href="#" class="backToTop">&#129093;</a>
                     </div>
                 </li>
                 <li class="cocoaTypes__list-item product6">Влияние сорта на качество<br> и вкус шоколада
@@ -1092,7 +1092,7 @@
                             прошли эти какао-бобы — от тропических лесов до вашего стола! Выбор правильного сорта может
                             сделать ваше наслаждение шоколадом ещё более глубоким и насыщенным.</p>
                         <button class="article-button">&#10006;</button>
-                        <a href="#" class="backToTop"></a>
+                        <a href="#" class="backToTop">&#129093;</a>
                     </div>
                 </li>
             </ul>
@@ -1115,104 +1115,49 @@
     <script src="headerMenuStyle.js"></script>
     <script>
         const extractionList = document.querySelectorAll('.extraction__list-item');
-        extractionList.forEach(item => {
-            item.addEventListener('click', (e) => {
-
-                const articleFull = item.querySelector('.article-full');
-                articleFull.style.display = 'flex';
-
-                const backToTop = articleFull.querySelector(".backToTop");
-                articleFull.addEventListener("scroll", function () {
-                    if (articleFull.scrollTop > 300) {
-                        backToTop.style.display = "block";
-                    } else {
-                        backToTop.style.display = "none";
-                    }
-                });
-
-                backToTop.addEventListener("click", function (event) {
-                    event.stopPropagation();
-                    event.preventDefault();
-                    articleFull.scrollTo({ top: 0, behavior: "smooth" });
-                });
-
-                document.addEventListener('click', function (event) {
-                    event.stopPropagation();
-                    if (!articleFull.contains(event.target) && !item.contains(event.target)) {
-                        articleFull.style.display = 'none';
-                    }
-                });
-
-                const closeButton = articleFull.querySelector('.article-button');
-                closeButton.addEventListener('click', () => {
-                    event.stopPropagation();
-                    articleFull.style.display = 'none';
-                });
-
-
-            })
-        })
-
         const cocoaTypesList = document.querySelectorAll('.cocoaTypes__list-item');
-        cocoaTypesList.forEach(item => {
-            item.addEventListener('click', (e) => {
-
-                const articleFull = item.querySelector('.article-full');
-                articleFull.style.display = 'flex';
-
-                const backToTop = articleFull.querySelector(".backToTop");
-                articleFull.addEventListener("scroll", function () {
-                    if (articleFull.scrollTop > 300) {
-                        backToTop.style.display = "block";
-                    } else {
-                        backToTop.style.display = "none";
-                    }
-                });
-
-                backToTop.addEventListener("click", function (event) {
-                    event.stopPropagation();
-                    event.preventDefault();
-                    articleFull.scrollTo({ top: 0, behavior: "smooth" });
-                });
-
-                document.addEventListener('click', function (event) {
-                    event.stopPropagation();
-                    if (!articleFull.contains(event.target) && !item.contains(event.target)) {
-                        articleFull.style.display = 'none';
-                    }
-                });
-
-                const closeButton = articleFull.querySelector('.article-button');
-                closeButton.addEventListener('click', () => {
-                    event.stopPropagation();
-                    articleFull.style.display = 'none';
-                });
-            })
-        })
-
-        const toTop = () => {
-            const backToTop = articleFull.querySelector(".backToTop");
-                articleFull.addEventListener("scroll", function () {
-                    if (articleFull.scrollTop > 300) {
-                        backToTop.style.display = "block";
-                    } else {
-                        backToTop.style.display = "none";
-                    }
-                });
-
-                backToTop.addEventListener("click", function (event) {
-                    event.stopPropagation();
-                    event.preventDefault();
-                    articleFull.scrollTo({ top: 0, behavior: "smooth" });
-                });
-        }
         
+        function toTopAndClose(array) {
+            array.forEach(item => {
+                item.addEventListener('click', (e) => {
 
+                    const articleFull = item.querySelector('.article-full');
+                    articleFull.style.display = 'flex';
 
+                    const backToTop = articleFull.querySelector(".backToTop");
+                    articleFull.addEventListener("scroll", function () {
+                        if (articleFull.scrollTop > 300) {
+                            backToTop.style.display = "flex";
+                        } else {
+                            backToTop.style.display = "none";
+                        }
+                    });
 
+                    backToTop.addEventListener("click", function (event) {
+                        event.stopPropagation();
+                        event.preventDefault();
+                        articleFull.scrollTo({ top: 0, behavior: "smooth" });
+                    });
 
+                    document.addEventListener('click', function (event) {
+                        event.stopPropagation();
+                        if (!articleFull.contains(event.target) && !item.contains(event.target)) {
+                            articleFull.style.display = 'none';
+                        }
+                    });
 
+                    const closeButton = articleFull.querySelector('.article-button');
+                    closeButton.addEventListener('click', () => {
+                        event.stopPropagation();
+                        articleFull.style.display = 'none';
+                    });
+                })
+            })
+        }
 
+        toTopAndClose(extractionList);
+        toTopAndClose(cocoaTypesList);
+           
     </script>
 </body>
 

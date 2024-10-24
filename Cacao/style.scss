@@ -597,14 +597,9 @@ body {
         cursor: pointer;
     }
 
-    &__title-inner {
-        display: inline-block;
-        margin-top: -5px;
-    }
-
     &__box {
         padding-bottom: 50px;
-        text-align: justify;
+        text-align: left;
     }
 
     &__box-img {
@@ -848,7 +843,7 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     overflow-y: auto;
-    text-align: justify;
+    text-align: left;
     cursor: default;
 
     &__img {
@@ -867,26 +862,6 @@ body {
 
 .article-button {
     display: none;
-}
-
-.backToTop {
-    width: 20px;
-    height: 20px;
-    border-top: 5px solid #7a295a;
-    border-right: 5px solid #7a295a;
-    margin: 10px 10px 0px 0;
-    border-radius: 10%;
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    display: none;
-    z-index: 1000;
-    -webkit-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
 }
 
 .processType {
@@ -1181,7 +1156,7 @@ body {
         height: 103px;
         -ms-flex-pack: distribute;
         -webkit-box-pack: space-evenly;
-                justify-content: space-evenly;
+        justify-content: space-evenly;
 
         &__left {
             display: -webkit-box;
@@ -1265,10 +1240,15 @@ body {
             content: url(img/body_history2-mobile.png);
             width: unset;
             -o-object-fit: cover;
-               object-fit: cover;
+            object-fit: cover;
             -o-object-position: right;
-               object-position: right;
+            object-position: right;
         }
+    }
+
+    .wrapper {
+        background-attachment: scroll;
+        background-position: left;
     }
 
     .top {
@@ -1376,7 +1356,13 @@ body {
         }
 
         &__item {
-            margin-left: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        &__item:not([open]):hover {
+            background-color: inherit;
+            border-radius: inherit;
         }
 
         &__title {
@@ -1387,25 +1373,28 @@ body {
 
         &__box {
             padding-bottom: 25px;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-            flex-direction: column;
         }
 
         &__item-img {
             float: none;
             margin-right: 0px;
-            margin-top: -7px;
+            margin-top: 0;
         }
 
         &__box-img {
             margin-bottom: 0px;
             width: 88vw;
         }
+    }
+
+    .box {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
     }
 
     .linkBox {
@@ -1421,8 +1410,22 @@ body {
         align-items: center;
 
         &__title {
-            top: 26%;
-            left: 5%;
+            top: 0;
+            left: unset;
+            width: 100%;
+            text-align: center;
+            font-size: 22px;
+            padding: 10px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #f7daa6;
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+            background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        }
+
+        &__img {
+            content: url(img/cacao_news-mobile.png);
         }
 
     }
@@ -1469,7 +1472,6 @@ body {
         &__article-inner {
             margin-top: 10px;
             margin-bottom: 10px;
-
         }
 
         &__block {
@@ -1491,12 +1493,12 @@ body {
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        
+        -ms-flex-align: center;
+        align-items: center;
+
         &__block {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -1597,6 +1599,10 @@ body {
             padding: 5px;
             border-radius: 10px;
         }
+
+        &__list-item:hover {
+            animation: inherit;
+        }
     }
 
     .cocoaTypes {
@@ -1621,6 +1627,10 @@ body {
             padding: 5px;
             border-radius: 10px;
         }
+
+        &__list-item:hover {
+            animation: inherit;
+        }
     }
 
     .article-full {
@@ -1630,7 +1640,7 @@ body {
         right: 0;
         width: 100vw;
         height: 100vh;
-        padding: 10px 5px 50px;
+        padding: 10px 5px 60px 10px;
 
         &__title {
             text-align: left;
@@ -1655,7 +1665,39 @@ body {
         margin: 10px;
         top: 0;
         right: 0;
-        border-radius: 50%;
+        border-radius: 30%;
+    }
+
+    .arrow-up {
+        width: 30px;
+        height: 30px;
+    }
+
+    .backToTop {
+        width: 30px;
+        height: 30px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 10%;
+        display: none;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 1;
+        font-size: 24px;
+        color: #7a295a;
+        background-color: rgba(248, 232, 203, 0.9529411765);
+        border: none;
+        padding: 22px;
     }
 
     .recipesBox {
