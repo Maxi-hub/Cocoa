@@ -1246,11 +1246,6 @@ body {
         }
     }
 
-    .wrapper {
-        background-attachment: scroll;
-        background-position: left;
-    }
-
     .top {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1379,6 +1374,7 @@ body {
             float: none;
             margin-right: 0px;
             margin-top: 0;
+            width: 88vw;
         }
 
         &__box-img {
@@ -1674,10 +1670,8 @@ body {
     }
 
     .backToTop {
-        width: 30px;
-        height: 30px;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
         border-radius: 10%;
         display: none;
         -webkit-box-pack: center;
@@ -1694,10 +1688,9 @@ body {
         right: 10px;
         z-index: 1;
         font-size: 24px;
-        color: #7a295a;
-        background-color: rgba(248, 232, 203, 0.9529411765);
-        border: none;
-        padding: 22px;
+        padding: 13px;
+        -webkit-filter: invert(17%) sepia(31%) saturate(2923%) hue-rotate(289deg) brightness(102%) contrast(89%);
+        filter: invert(17%) sepia(31%) saturate(2923%) hue-rotate(289deg) brightness(102%) contrast(89%);
     }
 
     .recipesBox {

@@ -386,13 +386,12 @@
             const appearPage = setTimeout(() => {
                 wallpaperBlock.style.display = 'none';
                 wrapperBlock.style.display = 'inline-block';
-
+       
                 window.scrollTo({
-                    top: 10,
+                    top: 0,
                     left: 0,
                     behavior: "smooth",
-                });
-
+                });           
             }, 10000);
 
             const appearHeader = setTimeout(() => {
@@ -408,7 +407,7 @@
                 headerEL.style.animation = 'show 4s';
 
                 window.scrollTo({
-                    top: 123,
+                    top: 0,
                     left: 0,
                     behavior: "smooth",
                 });
