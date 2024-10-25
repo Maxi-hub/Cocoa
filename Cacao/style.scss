@@ -140,14 +140,14 @@ body {
 }
 
 .wrapper {
-    display: none;
-    -webkit-animation-delay: 10s;
-    animation-delay: 10s;
-    -webkit-animation: show 1.5s;
-    animation: show 1.5s;
-    background: url(img/body_history1.png);
-    background-size: cover;
-    background-attachment: fixed;
+        display: none;
+        -webkit-animation-delay: 10s;
+        animation-delay: 10s;
+        -webkit-animation: show 1.5s;
+        animation: show 1.5s;
+        background: url(img/body_history1.png);
+        background-size: cover;
+        background-attachment: fixed;
 }
 
 
@@ -1238,12 +1238,15 @@ body {
     .wallpaper {
         &__img {
             content: url(img/body_history2-mobile.png);
-            width: unset;
-            -o-object-fit: cover;
             object-fit: cover;
-            -o-object-position: right;
-            object-position: right;
+            background-position: center top;
         }
+    }
+
+    .wrapper {
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
     }
 
     .top {
@@ -1670,16 +1673,7 @@ body {
     }
 
     .backToTop {
-        width: 20px;
-        height: 20px;
-        border-radius: 10%;
         display: none;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
         -webkit-transition: all 0.4s ease-in-out;
         -o-transition: all 0.4s ease-in-out;
         transition: all 0.4s ease-in-out;
@@ -1687,8 +1681,7 @@ body {
         bottom: 10px;
         right: 10px;
         z-index: 1;
-        font-size: 24px;
-        padding: 13px;
+        padding: 20px 10px 0px 20px;
         -webkit-filter: invert(17%) sepia(31%) saturate(2923%) hue-rotate(289deg) brightness(102%) contrast(89%);
         filter: invert(17%) sepia(31%) saturate(2923%) hue-rotate(289deg) brightness(102%) contrast(89%);
     }
