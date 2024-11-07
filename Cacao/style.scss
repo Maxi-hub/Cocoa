@@ -110,6 +110,10 @@ body {
     padding-right: calc(50% - 570px);
 }
 
+picture {
+    display: flex;
+}
+
 .wallpaper {
     -webkit-animation: show 10s;
     animation: show 10s;
