@@ -140,14 +140,20 @@ body {
 }
 
 .wrapper {
-        display: none;
-        -webkit-animation-delay: 10s;
-        animation-delay: 10s;
-        -webkit-animation: show 1.5s;
-        animation: show 1.5s;
-        background: url(img/body_history1.png);
-        background-size: cover;
-        background-attachment: fixed;
+    display: none;
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+    -webkit-animation: show 1.5s;
+    animation: show 1.5s;
+    background: url(img/body_history1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@supports (background-image: url(img/body_history1.webp)) {
+    .wrapper {
+        background-image: url(img/body_history1.webp);
+    }
 }
 
 
@@ -167,7 +173,7 @@ body {
     }
 
     &__menu-box {
-        background-image: url(img/woman.png);
+        background-image: url(img/woman.jpg);
         background-size: cover;
         position: fixed;
         top: 0px;
@@ -176,6 +182,12 @@ body {
         height: 100vh;
         z-index: 2;
         display: none;
+    }
+
+    @supports (background-image: url(img/woman.webp)) {
+        &__menu-box {
+            background-image: url(img/woman.webp);
+        }
     }
 
     &__menu {
@@ -198,7 +210,6 @@ body {
         font-size: 25px;
         color: #5f5f5f;
     }
-
 
     &__menu-link:nth-child(2n+1) {
         padding-left: 60px;
@@ -304,7 +315,7 @@ body {
 }
 
 .top {
-    background-image: url(img/jungle.png);
+    background-image: url(img/jungle.jpg);
     background-size: cover;
     min-height: 100vh;
     display: -webkit-box;
@@ -313,6 +324,12 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+
+@supports (background-image: url(img/jungle.webp)) {
+    .top {
+        background-image: url(img/jungle.webp);
+    }
 }
 
 .controller {
@@ -392,9 +409,28 @@ body {
         z-index: 1;
     }
 
+    picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    }
+
+    &__innerRing {
+        width: 368px;
+        height: 360px;
+        position: absolute;
+        cursor: pointer;
+        -webkit-transition: opacity 2s ease, -webkit-transform 2s ease;
+        transition: opacity 2s ease, -webkit-transform 2s ease;
+        -o-transition: transform 2s ease, opacity 2s ease;
+        transition: transform 2s ease, opacity 2s ease;
+        transition: transform 2s ease, opacity 2s ease, -webkit-transform 2s ease;
+    }
+
     &__background {
         border-radius: 50%;
-        background-image: url(img/light.png);
+        background-image: url(img/light.jpg);
         background-size: cover;
         position: absolute;
         display: -webkit-box;
@@ -414,18 +450,12 @@ body {
         transition: transform 5s ease-in;
         transition: transform 5s ease-in, -webkit-transform 5s ease-in;
     }
-}
 
-#calendarInnerRing {
-    width: 373px;
-    height: 351px;
-    position: absolute;
-    cursor: pointer;
-    -webkit-transition: opacity 2s ease, -webkit-transform 2s ease;
-    transition: opacity 2s ease, -webkit-transform 2s ease;
-    -o-transition: transform 2s ease, opacity 2s ease;
-    transition: transform 2s ease, opacity 2s ease;
-    transition: transform 2s ease, opacity 2s ease, -webkit-transform 2s ease;
+    @supports (background-image: url(img/light.webp)) {
+        &__background {
+            background-image: url(img/light.webp);
+        }
+    }
 }
 
 #canvas {
@@ -442,21 +472,21 @@ body {
     opacity: 1;
 }
 
-.content {
-    background: url(img/body.png) no-repeat;
-    background-size: cover;
-    height: 100vh;
-    @include flex(flex, center, center);
-    text-align: center;
+// .content {
+//     background: url(img/body.png) no-repeat;
+//     background-size: cover;
+//     height: 100vh;
+//     @include flex(flex, center, center);
+//     text-align: center;
 
-    &__text {
-        color: $bgColor;
-        text-transform: uppercase;
-        font-size: 150px;
-        letter-spacing: 20px;
-        font-weight: 800;
-    }
-}
+//     &__text {
+//         color: $bgColor;
+//         text-transform: uppercase;
+//         font-size: 150px;
+//         letter-spacing: 20px;
+//         font-weight: 800;
+//     }
+// }
 
 .about {
     min-height: 250vh;
@@ -757,7 +787,7 @@ body {
 .cultureNews {
     padding: 50px 0;
     text-align: center;
-    background-image: url(img/drying.png);
+    background-image: url(img/drying.jpg);
     background-size: cover;
 
     &__title {
@@ -778,6 +808,12 @@ body {
         background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
         padding: 10px;
+    }
+}
+
+@supports (background-image: url(img/drying.webp)) {
+    .cultureNews {
+        background-image: url(img/drying.webp);
     }
 }
 
@@ -957,12 +993,18 @@ body {
 .recipesBox {
     padding-top: 50px;
     padding-bottom: 50px;
-    background-image: url(img/choco3.png);
+    background-image: url(img/choco.jpg);
     background-size: cover;
     text-align: center;
 
     &__title {
         margin-bottom: 20px;
+    }
+}
+
+@supports (background-image: url(img/choco.webp)) {
+    .recipesBox {
+        background-image: url(img/choco.webp);
     }
 }
 
@@ -1209,9 +1251,15 @@ body {
         }
 
         &__menu-box {
-            background-image: url(img/woman-mobile.png);
+            background-image: url(img/woman-mobile.jpg);
             background-repeat: no-repeat;
             background-position: center top;
+        }
+
+        @supports (background-image: url(img/woman-mobile.webp)) {
+            &__menu-box {
+                background-image: url(img/woman-mobile.webp);
+            }
         }
 
         &__menu-link:nth-child(2n+1) {
@@ -1237,9 +1285,15 @@ body {
 
     .wallpaper {
         &__img {
-            content: url(img/body_history2-mobile.png);
+            content: url(img/body_history2-mobile.jpg);
             object-fit: cover;
             background-position: center top;
+        }
+
+        @supports (content: url(img/body_history2-mobile.webp)) {
+            &__img {
+                content: url(img/body_history2-mobile.webp);
+            }
         }
     }
 
@@ -1303,21 +1357,21 @@ body {
             padding-left: 4vw;
         }
 
+        &__outerRing {
+            height: 90vw;
+        }
+
+        &__innerRing {
+            width: 75vw;
+            height: unset;
+        }
+
         &__background {
             width: 75vw;
             height: 75vw;
             margin-bottom: 13px;
             margin-left: 23px;
         }
-    }
-
-    #calendarOuterRing {
-        height: 90vw;
-    }
-
-    #calendarInnerRing {
-        width: 75vw;
-        height: unset;
     }
 
     #canvas {
@@ -1424,7 +1478,13 @@ body {
         }
 
         &__img {
-            content: url(img/cacao_news-mobile.png);
+            content: url(img/cacao_news-mobile.jpg);
+        }
+
+        @supports (content: url(img/cacao_news-mobile.webp)) {
+            &__img {
+                content: url(img/cacao_news-mobile.webp);
+            }
         }
 
     }

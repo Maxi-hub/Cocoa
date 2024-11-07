@@ -73,11 +73,16 @@ body {
   display: none;
   animation-delay: 10s;
   animation: show 1.5s;
-  background: url(img/body_history1.png);
+  background: url(img/body_history1.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
 
+@supports (background-image: url(img/body_history1.webp)) {
+  .wrapper {
+    background-image: url(img/body_history1.webp);
+  }
+}
 .header {
   height: 220px;
   background-color: #201217;
@@ -94,7 +99,7 @@ body {
   cursor: pointer;
 }
 .header__menu-box {
-  background-image: url(img/woman.png);
+  background-image: url(img/woman.jpg);
   background-size: cover;
   position: fixed;
   top: 0px;
@@ -103,6 +108,11 @@ body {
   height: 100vh;
   z-index: 2;
   display: none;
+}
+@supports (background-image: url(img/woman.webp)) {
+  .header__menu-box {
+    background-image: url(img/woman.webp);
+  }
 }
 .header__menu {
   display: flex;
@@ -199,13 +209,18 @@ body {
 }
 
 .top {
-  background-image: url(img/jungle.png);
+  background-image: url(img/jungle.jpg);
   background-size: cover;
   min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
+@supports (background-image: url(img/jungle.webp)) {
+  .top {
+    background-image: url(img/jungle.webp);
+  }
+}
 .controller {
   display: flex;
 }
@@ -250,9 +265,22 @@ body {
   height: 498px;
   z-index: 1;
 }
+.calendar picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.calendar__innerRing {
+  width: 368px;
+  height: 360px;
+  position: absolute;
+  cursor: pointer;
+  transition: transform 2s ease, opacity 2s ease;
+}
 .calendar__background {
   border-radius: 50%;
-  background-image: url(img/light.png);
+  background-image: url(img/light.jpg);
   background-size: cover;
   position: absolute;
   display: flex;
@@ -262,13 +290,10 @@ body {
   height: 360px;
   transition: transform 5s ease-in;
 }
-
-#calendarInnerRing {
-  width: 373px;
-  height: 351px;
-  position: absolute;
-  cursor: pointer;
-  transition: transform 2s ease, opacity 2s ease;
+@supports (background-image: url(img/light.webp)) {
+  .calendar__background {
+    background-image: url(img/light.webp);
+  }
 }
 
 #canvas {
@@ -281,23 +306,6 @@ body {
 
 #canvas.active {
   opacity: 1;
-}
-
-.content {
-  background: url(img/body.png) no-repeat;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.content__text {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 150px;
-  letter-spacing: 20px;
-  font-weight: 800;
 }
 
 .about {
@@ -539,7 +547,7 @@ body {
 .cultureNews {
   padding: 50px 0;
   text-align: center;
-  background-image: url(img/drying.png);
+  background-image: url(img/drying.jpg);
   background-size: cover;
 }
 .cultureNews__title {
@@ -557,6 +565,11 @@ body {
   padding: 10px;
 }
 
+@supports (background-image: url(img/drying.webp)) {
+  .cultureNews {
+    background-image: url(img/drying.webp);
+  }
+}
 .extraction {
   margin-bottom: 100px;
 }
@@ -699,7 +712,7 @@ body {
 .recipesBox {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-image: url(img/choco3.png);
+  background-image: url(img/choco.jpg);
   background-size: cover;
   text-align: center;
 }
@@ -707,6 +720,11 @@ body {
   margin-bottom: 20px;
 }
 
+@supports (background-image: url(img/choco.webp)) {
+  .recipesBox {
+    background-image: url(img/choco.webp);
+  }
+}
 .recipes {
   display: flex;
   flex-direction: column;
@@ -900,9 +918,14 @@ body {
     width: 46vw;
   }
   .header__menu-box {
-    background-image: url(img/woman-mobile.png);
+    background-image: url(img/woman-mobile.jpg);
     background-repeat: no-repeat;
     background-position: center top;
+  }
+  @supports (background-image: url(img/woman-mobile.webp)) {
+    .header__menu-box {
+      background-image: url(img/woman-mobile.webp);
+    }
   }
   .header__menu-link:nth-child(2n+1) {
     padding-left: 30px;
@@ -921,10 +944,15 @@ body {
     left: 20px;
   }
   .wallpaper__img {
-    content: url(img/body_history2-mobile.png);
+    content: url(img/body_history2-mobile.jpg);
     -o-object-fit: cover;
        object-fit: cover;
     background-position: center top;
+  }
+  @supports (content: url(img/body_history2-mobile.webp)) {
+    .wallpaper__img {
+      content: url(img/body_history2-mobile.webp);
+    }
   }
   .wrapper {
     background-position: center;
@@ -965,18 +993,18 @@ body {
     margin-bottom: 20px;
     padding-left: 4vw;
   }
+  .calendar__outerRing {
+    height: 90vw;
+  }
+  .calendar__innerRing {
+    width: 75vw;
+    height: unset;
+  }
   .calendar__background {
     width: 75vw;
     height: 75vw;
     margin-bottom: 13px;
     margin-left: 23px;
-  }
-  #calendarOuterRing {
-    height: 90vw;
-  }
-  #calendarInnerRing {
-    width: 75vw;
-    height: unset;
   }
   #canvas {
     width: 90vw;
@@ -1048,7 +1076,12 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   }
   .linkBox__img {
-    content: url(img/cacao_news-mobile.png);
+    content: url(img/cacao_news-mobile.jpg);
+  }
+  @supports (content: url(img/cacao_news-mobile.webp)) {
+    .linkBox__img {
+      content: url(img/cacao_news-mobile.webp);
+    }
   }
   .newsMenu {
     position: unset;

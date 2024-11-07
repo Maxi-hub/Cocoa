@@ -12,7 +12,10 @@
 <body>
     <header class="header center">
         <div class="header__left">
-            <img class="header__imgMenu" src="img/burgermenu.png" alt="меню">
+            <picture>
+                <source srcset="img/burgermenu.webp" type="image/webp">
+                <img class="header__imgMenu" src="img/burgermenu.jpg" alt="меню">
+            </picture>
             <div class="header__menu-box">
                 <div class="header__menu">
                     <a href="index.html" class="header__menu-link first">Главная</a>
@@ -27,53 +30,72 @@
             </div>
         </div>
         <a class="header__center" href="index.html">
-            <img class="header__center-logo" src="img/logo.png" alt="Логотип какао">
+            <picture>
+                <source srcset="img/logo.webp" type="image/webp">
+                <img class="header__center-logo" src="img/logo.jpg" alt="Логотип какао">
+            </picture>
         </a>
         <div class="header__right">
             <div class="header__right-menu">
                 <figure class="music">
                     <figcaption class="music__text">Listen wild jungles</figcaption>
-                    <img class="music__img" src="img/sound.png" alt="Знак динамика"
+                    <picture>
+                        <source srcset="img/sound.webp" type="image/webp">
+                        <img class="music__img" src="img/sound.png" alt="Знак динамика"
                         onclick="document.querySelector('audio').play()"
                         ondblclick="document.querySelector('audio').pause()">
+                    </picture>                    
                     <span class="music__img-text">click once to play and twice to stop</span>
                     <audio id="audio" src="audio/wildjunglewithhighttree.mp3" loop></audio>
                 </figure>
             </div>
         </div>
     </header>
-
     <div class="recipesBox center">
         <h1 class="recipesBox__title">Какао и Шоколад: путь к Здоровью и Удовольствию</h1>
         <div class="recipes">
             <div class="topic-block">
                 <a href="./recipes/classicCacao.html">
-                    <img class="topic-block__img" src="img/cacaoCup.png"
+                    <picture>
+                        <source srcset="img/cacaoCup.webp" type="image/webp">
+                        <img class="topic-block__img" src="img/cacaoCup.jpg"
                         alt="Глиняная чашка с какао напитком на деревянном столике">
+                    </picture>
                 </a>
                 <h2 class="indentBottom topic-block__title">Классическое какао</h2>
             </div>
             <div class="topic-block">
                 <a href="./recipes/cocoaWithSpices.html">
-                    <img class="topic-block__img" src="img/cacaoCupAndSp.png"
+                    <picture>
+                        <source srcset="img/cacaoCupAndSp.webp" type="image/webp">
+                        <img class="topic-block__img" src="img/cacaoCupAndSp.jpg"
                         alt="Керамическая чашка с какао на каменном столе со специями красного перца, кардамона, мускатного ореха и какао вокруг">
+                    </picture>
                 </a>
                 <h2 class="indentBottom topic-block__title">Какао с пряностями</h2>
             </div>
         </div>
 
     </div>
-
     <footer class="footer center">
         <div class="copyright">&copy; Emma Lebedeva & VP, 2024</div>
-        <img class="footer__img" src="img/footercenter.png" alt="">
+        <picture>
+            <source srcset="img/footercenter.webp" type="image/webp">
+            <img class="footer__img" src="img/footercenter.jpg" alt="Изображение сказочной птицы с расправленными крыльями">
+        </picture>             
         <div class="contacts">
             <div class="email">
-                <img class="contacts__img mail" src="img/email2.png" alt="Знак почты">
+                <picture>
+                    <source srcset="img/email.webp" type="image/webp">
+                    <img class="contacts__img mail" src="img/email.png" alt="Знак почты">
+                </picture>                          
                 <p class="contacts__text">universeofcacao@gmail.com</p>
             </div>
-            <a class="social" href="https://t.me/universeofcacao" target="_blank">
-                <img class="contacts__img" src="img/TG.png" alt="Телеграм">
+            <a class="social" href="https://t.me/cocoauniverse" target="_blank">
+                <picture>
+                    <source srcset="img/TG.webp" type="image/webp">
+                    <img class="contacts__img" src="img/TG.jpg" alt="Телеграм">
+                </picture>                         
                 <p class="social__text">cocoauniverse</p>
             </a>
         </div>

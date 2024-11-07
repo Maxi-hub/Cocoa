@@ -12,7 +12,10 @@
 <body>
     <header class="header center">
         <div class="header__left">
-            <img class="header__imgMenu" src="../img/burgermenu.png" alt="навигационное меню">
+            <picture>
+                <source srcset="../img/burgermenu.webp" type="image/webp">
+                <img class="header__imgMenu" src="../img/burgermenu.jpg" alt="меню">
+            </picture>
             <div class="header__menu-box">
                 <div class="header__menu">
                     <a href="../index.html" class="header__menu-link first">Главная</a>
@@ -20,34 +23,43 @@
                     <a href="../history.html" class="header__menu-link">История какао</a>
                     <a href="../news.html" class="header__menu-link">Какао новости</a>
                     <a href="../culture.html" class="header__menu-link">Культура какао сегодня</a>
-                    <a href="../recipes.html" class="header__menu-link">Какао и Шоколад:<br> путь к Здоровью и Удовольствию</a>
+                    <a href="../recipes.html" class="header__menu-link">Какао и Шоколад:<br> путь к Здоровью и
+                        Удовольствию</a>
                 </div>
                 <button class="header__menu-button">Закрыть</button>
             </div>
         </div>
         <a class="header__center" href="../index.html">
-            <img class="header__center-logo" src="../img/logo.png" alt="Логотип какао">
+            <picture>
+                <source srcset="../img/logo.webp" type="image/webp">
+                <img class="header__center-logo" src="../img/logo.jpg" alt="Логотип какао">
+            </picture>
         </a>
         <div class="header__right">
             <div class="header__right-menu">
                 <figure class="music">
                     <figcaption class="music__text">Listen wild jungles</figcaption>
-                    <img class="music__img" src="../img/sound.png" alt="Знак динамика"
+                    <picture>
+                        <source srcset="../img/sound.webp" type="image/webp">
+                        <img class="music__img" src="../img/sound.png" alt="Знак динамика"
                         onclick="document.querySelector('audio').play()"
                         ondblclick="document.querySelector('audio').pause()">
+                    </picture>                    
                     <span class="music__img-text">click once to play and twice to stop</span>
                     <audio id="audio" src="../audio/wildjunglewithhighttree.mp3" loop></audio>
                 </figure>
             </div>
         </div>
     </header>
-
     <div class="recipesBox center">
         <div class="recipesBox_wrapper">
             <div class="topic">
                 <h2 class="indentBottom topic__title">Какао с пряностями</h2>
-                <img class="topic__img indentBottom" src="../img/cacaoCupAndSp.png"
+                <picture>
+                    <source srcset="../img/cacaoCupAndSp.webp" type="image/webp">
+                    <img class="topic__img indentBottom" src="../img/cacaoCupAndSp.jpg"
                     alt="Керамическая чашка с какао на каменном столе со специями красного перца, кардамона, мускатного ореха и какао вокруг">
+                </picture>                
                 <div class="topic__description">
                     <p class="indentBottom indent">Привет! Сегодня поделимся с вами рецептом приготовления настоящего
                         какао
@@ -111,14 +123,23 @@
     </div>
     <footer class="footer center">
         <div class="copyright">&copy; Emma Lebedeva & VP, 2024</div>
-        <img class="footer__img" src="../img/footercenter.png" alt="">
+        <picture>
+            <source srcset="../img/footercenter.webp" type="image/webp">
+            <img class="footer__img" src="../img/footercenter.jpg" alt="Изображение сказочной птицы с расправленными крыльями">
+        </picture>             
         <div class="contacts">
             <div class="email">
-                <img class="contacts__img mail" src="../img/email2.png" alt="Знак почты">
+                <picture>
+                    <source srcset="../img/email.webp" type="image/webp">
+                    <img class="contacts__img mail" src="../img/email.png" alt="Знак почты">
+                </picture>                          
                 <p class="contacts__text">universeofcacao@gmail.com</p>
             </div>
-            <a class="social" href="https://t.me/universeofcacao" target="_blank">
-                <img class="contacts__img" src="../img/TG.png" alt="Телеграм">
+            <a class="social" href="https://t.me/cocoauniverse" target="_blank">
+                <picture>
+                    <source srcset="../img/TG.webp" type="image/webp">
+                    <img class="contacts__img" src="../img/TG.jpg" alt="Телеграм">
+                </picture>                         
                 <p class="social__text">cocoauniverse</p>
             </a>
         </div>

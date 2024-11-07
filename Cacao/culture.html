@@ -11,7 +11,10 @@
 <body>
     <header class="header center">
         <div class="header__left">
-            <img class="header__imgMenu" src="img/burgermenu.png" alt="меню">
+            <picture>
+                <source srcset="img/burgermenu.webp" type="image/webp">
+                <img class="header__imgMenu" src="img/burgermenu.jpg" alt="меню">
+            </picture>
             <div class="header__menu-box">
                 <div class="header__menu">
                     <a href="index.html" class="header__menu-link first">Главная</a>
@@ -26,15 +29,21 @@
             </div>
         </div>
         <a class="header__center" href="index.html">
-            <img class="header__center-logo" src="img/logo.png" alt="Логотип какао">
+            <picture>
+                <source srcset="img/logo.webp" type="image/webp">
+                <img class="header__center-logo" src="img/logo.jpg" alt="Логотип какао">
+            </picture>
         </a>
         <div class="header__right">
             <div class="header__right-menu">
                 <figure class="music">
                     <figcaption class="music__text">Listen wild jungles</figcaption>
-                    <img class="music__img" src="img/sound.png" alt="Знак динамика"
-                        onclick="document.querySelector('audio').play()"
-                        ondblclick="document.querySelector('audio').pause()">
+                    <picture>
+                        <source srcset="img/sound.webp" type="image/webp">
+                        <img class="music__img" src="img/sound.png" alt="Знак динамика"
+                            onclick="document.querySelector('audio').play()"
+                            ondblclick="document.querySelector('audio').pause()">
+                    </picture>
                     <span class="music__img-text">click once to play and twice to stop</span>
                     <audio id="audio" src="audio/wildjunglewithhighttree.mp3" loop></audio>
                 </figure>
@@ -54,7 +63,11 @@
                         <h2 class="article-full__title indentBottom">Описание процесса производства какао-бобов от сбора
                             до упаковки в мешки
                         </h2>
-                        <img class="article-full__img indentBottom" src="img/bean_open.png" alt="Раскрытый какао плод">
+                        <picture>
+                            <source srcset="img/bean_open.webp" type="image/webp">
+                            <img class="article-full__img indentBottom" src="img/bean_open.jpg"
+                                alt="Раскрытый какао плод">
+                        </picture>
                         <div class="processType">
                             <h3 class="indentBottom">Сбор урожая</h3>
                             <p>Сбор урожая какао — это первый и ключевой этап в производстве шоколада. Он происходит два
@@ -197,7 +210,8 @@
                         <p> Каждый из этих этапов — от сбора урожая до его упаковки — играет важную роль в создании
                             качественного шоколада, который мы все любим.</p>
                         <button class="article-button">&#10006;</button>
-                        <a href="#" class="backToTop"><img src="img/chevron-up-solid.svg" alt="Стрелка вверх" width="30" height="30"></a>
+                        <a href="#" class="backToTop"><img src="img/chevron-up-solid.svg" alt="Стрелка вверх" width="30"
+                                height="30"></a>
                     </div>
                 </li>
                 <li class="extraction__list-item product2">Технология изготовления шоколада, включая обжарку,
@@ -376,7 +390,8 @@
                             </ol>
                         </div>
                         <button class="article-button">&#10006;</button>
-                        <a href="#" class="backToTop"><img src="img/chevron-up-solid.svg" alt="Стрелка вверх" width="30" height="30"></a>
+                        <a href="#" class="backToTop"><img src="img/chevron-up-solid.svg" alt="Стрелка вверх" width="30"
+                                height="30"></a>
                     </div>
                 </li>
                 <li class="extraction__list-item product3">Роль различных ингредиентов <br>в производстве
@@ -469,7 +484,8 @@
                             </ol>
                         </div>
                         <button class="article-button">&#10006;</button>
-                        <a href="#" class="backToTop"><img src="img/chevron-up-solid.svg" alt="Стрелка вверх" width="30" height="30"></a>
+                        <a href="#" class="backToTop"><img src="img/chevron-up-solid.svg" alt="Стрелка вверх" width="30"
+                                height="30"></a>
                     </div>
                 </li>
             </ul>
@@ -648,7 +664,8 @@
                         </p>
                         <p>А какой ваш любимый вид шоколада?</p>
                         <button class="article-button">&#10006;</button>
-                        <a href="#" class="backToTop"><img src="img/chevron-up-solid.svg" alt="Стрелка вверх" width="30" height="30"></a>
+                        <a href="#" class="backToTop"><img src="img/chevron-up-solid.svg" alt="Стрелка вверх" width="30"
+                                height="30"></a>
                     </div>
                 </li>
                 <li class="cocoaTypes__list-item product5">Характеристики и особенности вкуса различных сортов
@@ -812,7 +829,8 @@
                             любимые
                             сочетания и насладиться разнообразием этого замечательного продукта!</p>
                         <button class="article-button">&#10006;</button>
-                        <a href="#" class="backToTop"><img src="img/chevron-up-solid.svg" alt="Стрелка вверх" width="30" height="30"></a>
+                        <a href="#" class="backToTop"><img src="img/chevron-up-solid.svg" alt="Стрелка вверх" width="30"
+                                height="30"></a>
                     </div>
                 </li>
                 <li class="cocoaTypes__list-item product6">Влияние сорта на качество<br> и вкус шоколада
@@ -1090,7 +1108,8 @@
                             прошли эти какао-бобы — от тропических лесов до вашего стола! Выбор правильного сорта может
                             сделать ваше наслаждение шоколадом ещё более глубоким и насыщенным.</p>
                         <button class="article-button">&#10006;</button>
-                        <a href="#" class="backToTop"><img src="img/chevron-up-solid.svg" alt="Стрелка вверх" width="30" height="30"></a>
+                        <a href="#" class="backToTop"><img src="img/chevron-up-solid.svg" alt="Стрелка вверх" width="30"
+                                height="30"></a>
                     </div>
                 </li>
             </ul>
@@ -1098,14 +1117,24 @@
     </div>
     <footer class="footer center">
         <div class="copyright">&copy; Emma Lebedeva & VP, 2024</div>
-        <img class="footer__img" src="img/footercenter.png" alt="">
+        <picture>
+            <source srcset="img/footercenter.webp" type="image/webp">
+            <img class="footer__img" src="img/footercenter.jpg"
+                alt="Изображение сказочной птицы с расправленными крыльями">
+        </picture>
         <div class="contacts">
             <div class="email">
-                <img class="contacts__img mail" src="img/email2.png" alt="Знак почты">
+                <picture>
+                    <source srcset="img/email.webp" type="image/webp">
+                    <img class="contacts__img mail" src="img/email.png" alt="Знак почты">
+                </picture>
                 <p class="contacts__text">universeofcacao@gmail.com</p>
             </div>
-            <a class="social" href="https://t.me/universeofcacao" target="_blank">
-                <img class="contacts__img" src="img/TG.png" alt="Телеграм">
+            <a class="social" href="https://t.me/cocoauniverse" target="_blank">
+                <picture>
+                    <source srcset="img/TG.webp" type="image/webp">
+                    <img class="contacts__img" src="img/TG.jpg" alt="Телеграм">
+                </picture>
                 <p class="social__text">cocoauniverse</p>
             </a>
         </div>
@@ -1114,7 +1143,7 @@
     <script>
         const extractionList = document.querySelectorAll('.extraction__list-item');
         const cocoaTypesList = document.querySelectorAll('.cocoaTypes__list-item');
-        
+
         function toTopAndClose(array) {
             array.forEach(item => {
                 item.addEventListener('click', (e) => {
@@ -1124,7 +1153,7 @@
 
                     const backToTop = articleFull.querySelector(".backToTop");
                     articleFull.addEventListener("scroll", function () {
-                        if (articleFull.scrollTop > 300) {
+                        if (articleFull.scrollTop > 300 && window.innerWidth <= 767) {
                             backToTop.style.display = "block";
                         } else {
                             backToTop.style.display = "none";
@@ -1155,7 +1184,7 @@
 
         toTopAndClose(extractionList);
         toTopAndClose(cocoaTypesList);
-           
+
     </script>
 </body>
 
